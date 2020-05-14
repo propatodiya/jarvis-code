@@ -1,0 +1,90 @@
+.banking-score-parent {
+  .bank-block {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    .bank-section {
+      border-radius: 4px;
+      display: flex;
+      flex-wrap: nowrap;
+      margin: 20px 10px 20px 0px;
+      padding: 15px;
+      box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 4px 6px 0 rgba(0, 0, 0, 0.19);
+      .bank-details {
+        .bank-name {
+          font-size: 16px;
+        }
+        .account-number {
+          font-size: 14px;
+          color: $brand-primary;
+        }
+      }
+      .bank-select {
+        border: 1px solid $dark-white;
+        border-radius: 50%;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        .select-image {
+        }
+      }
+    }
+    .bank-selection-active{
+        border-bottom: 3px solid $brand-success;
+    }
+    .bank-selection-inactive{
+        border-bottom: 3px solid $brand-rose;
+    }
+  }
+  .banking-score {
+    display: flex;
+    flex-wrap: nowrap;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 4px 6px 0 rgba(0, 0, 0, 0.19);
+    max-width: 240px;
+    border-radius: 4px;
+    margin: 20px 0px;
+
+    .score-tab {
+      padding: 10px;
+      .banking-score-img {
+        text-align: center;
+      }
+
+      .banking-score-label {
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+        color: $brand-primary;
+      }
+    }
+    .score-value {
+      background: $brand-success;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0px 4px 4px 0px;
+      font-size: 24px;
+      font-weight: 600;
+      color: #ffffff;
+      width: 100px;
+    }
+  }
+
+  .coloum-indicators{
+    margin: 20px 0px;
+    padding: 20px 0px;
+  }
+
+  .banking-score-desc {
+    padding: 15px 0px;
+  }
+
+  .tooltip-inner {
+    background: $brand-warning;
+    color: $dark-black;
+  }
+}

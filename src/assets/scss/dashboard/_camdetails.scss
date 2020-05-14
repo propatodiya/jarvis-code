@@ -1,0 +1,492 @@
+.cam-container {
+  .cam-header {
+    padding: 10px;
+    font-family: $font-lato-semibold;
+    font-size: 120%;
+  }
+
+  .loan-info-action {
+    .loan-info-action-list {
+      ul {
+        list-style: none;
+        padding: 0px;
+        margin: 0 auto;
+        text-align: right;
+
+        li {
+          display: inline-block;
+          margin: 0px 10px;
+
+          button.btn {
+            min-width: 145px;
+          }
+        }
+      }
+    }
+  }
+
+  .cam-body {
+    .cam-details-card {
+      .cam-title {
+        color: $white;
+        font-family: $font-lato-semibold;
+        background: linear-gradient(90deg, #1e3b58, #32577e);
+        border-radius: 0px;
+        margin-top: 1rem;
+        font-size: 120%;
+
+        .cam-title-box {
+          padding: 10px;
+        }
+      }
+
+      .cam-title-head {
+        font-size: 120%;
+        margin-top: 10px;
+        .cam-title-head-box {
+          background: rgba(165, 165, 165, 0.2);
+          border-left: 5px solid $brand-primary;
+
+          .cam-title-head-text {
+            padding: 10px;
+          }
+        }
+      }
+      .cam-title-head-sub-head {
+        padding: 10px 15px;
+        background: rgb(249, 249, 249);
+        color: $brand-primary;
+        font-family: $font-lato-semibold;
+        font-size: 120%;
+        @include box-shadow-default();
+      }
+    }
+  }
+
+  .sticky-remark-icon {
+    position: fixed;
+    bottom: 80px;
+    right: 10px;
+    z-index: 110;
+
+    .remarks-btn {
+      button.btn {
+        height: 40px;
+        width: 40px;
+        min-width: 40px;
+
+        img {
+          width: 56px;
+          height: 56px;
+          position: absolute;
+          top: -5px;
+          right: -8px;
+        }
+      }
+    }
+  }
+}
+
+.ec-head-title {
+  font-size: 120%;
+  color: $silver;
+  font-family: $font-lato-semibold;
+}
+
+.externam-checks-container {
+  min-height: 400px;
+
+  .ec-header {
+    margin-bottom: 1rem;
+
+    .ec-s-card {
+      padding: 30px 20px;
+      margin: 10px auto;
+      border-radius: 6px;
+      position: relative;
+      background: transparent linear-gradient(180deg, #118e7a 0%, #2b5582 100%) 0% 0% no-repeat padding-box;
+      color: #fff;
+      min-height: 100px;
+      @include box-shadow-default();
+
+      .ec-s-title {
+        font-weight: bold;
+      }
+
+      .ec-s-score {
+        font-size: 200%;
+        font-weight: bold;
+      }
+
+      .ec-s-icon {
+        opacity: 0.4;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+      }
+    }
+  }
+
+  .ec-body {
+    margin-bottom: 1rem;
+
+    .ec-head {
+      padding: 10px 0px;
+      border-bottom: 1px solid $silver;
+
+      .ec-title {
+        @extend .ec-head-title;
+      }
+    }
+
+    .ec-bureau {
+      margin-top: 1rem;
+
+      .ec-b-title {
+        @extend .ec-head-title;
+      }
+    }
+
+    .loan-info-form-button {
+      button.btn {
+        min-width: 150px;
+      }
+    }
+  }
+}
+
+.loan-info-container {
+  .loan-info-header {
+    background: $white;
+    border-radius: 6px;
+    padding: 10px 0px;
+    @include box-shadow-default();
+
+    .loan-info-title {
+      .loan-info-name {
+        padding: 15px 0px;
+        font-size: 150%;
+      }
+
+      .loan-info-action {
+        .loan-info-action-list {
+          ul {
+            list-style: none;
+            padding: 0px;
+            margin: 0 auto;
+            text-align: right;
+
+            li {
+              display: inline-block;
+              margin: 0px 10px;
+
+              button.btn {
+                min-width: 145px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .condition-box {
+    .condition-title {
+      color: $brand-primary;
+      font-family: $font-lato-semibold;
+      display: block;
+      font-size: 110%;
+      padding: 5px 15px;
+      margin: 0 auto;
+    }
+
+    .condition-info {
+      color: inherit;
+      display: block;
+      padding: 15px;
+      margin: 0 auto;
+      text-align: justify;
+      border: 1px solid $mdb-input-underline-color;
+      border-radius: 6px;
+      color: $brand-primary-text;
+    }
+  }
+}
+
+.bank-statements-container {
+  .wizard-navigation {
+    .nav-pills {
+      position: relative;
+      overflow: auto;
+      display: flex;
+      flex-wrap: nowrap;
+      background: rgba(255, 255, 255, 0);
+      border-bottom: 1px solid #d2d1d2;
+
+      li {
+        display: inline-flex;
+
+        a.nav-link {
+          font-family: $font-lato-semibold;
+          color: $brand-primary-text;
+          line-height: 20px;
+          border-radius: 4px 4px 0px 0px;
+          margin: 0 auto;
+          width: 100%;
+          white-space: normal;
+
+          span {
+            display: flex;
+            flex: 1;
+            flex-shrink: 1;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+          }
+
+          &.active-tab {
+            background: linear-gradient(90deg, #1e3b58, #32577e);
+            color: $white;
+            @include box-shadow-default();
+          }
+        }
+      }
+    }
+  }
+
+  .bank-details {
+    padding: 15px 0px;
+    .bank-parse {
+
+    }
+    .bank-title {
+      padding: 10px 0px;
+      background: $brand-primary;
+      color: $white;
+      font-size: 120%;
+      background: linear-gradient(90deg, #1e3b58, #32577e);
+    }
+
+    .btn-transaction {
+      display: inline-block;
+      padding: 0px 10px;
+    }
+  }
+
+  .bank-statements-placeholder {
+    .statements-placeholder {
+      min-height: 220px;
+      font-size: 150%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.cam-remarks-card {
+  height: 100vh;
+  width: 340px;
+  position: fixed;
+  top: 0px;
+  right: 0;
+  background: #f7f7f7;
+  z-index: 340;
+  padding: 0px 15px;
+  @include transitions(0.5s, cubic-bezier(0.685, 0.0473, 0.346, 1));
+  @include box-shadow-default();
+
+  .remarks-head {
+    // height: 70px;
+    background: linear-gradient(90deg, #1e3b58, #32577e);
+    position: relative;
+    overflow: hidden;
+
+    .remarks-head-box {
+      .remarks-head-title {
+        color: $white;
+        padding: 10px 0px;
+        font-size: 120%;
+        font-family: $font-lato-semibold;
+        text-align: center;
+
+        span.close {
+          position: absolute;
+          cursor: pointer;
+          right: 5px;
+          top: 5px;
+          height: 30px;
+          width: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 2px;
+          opacity: 0.8;
+          transform: rotate(180deg);
+
+          &:hover {
+            opacity: 1;
+            background: #ffffff24;
+          }
+        }
+      }
+    }
+
+    &::after {
+      position: absolute;
+      // content: '';
+      width: 780px;
+      height: 340px;
+      background: linear-gradient(90deg, #1e3b58, #32577e);
+      border-radius: 100%;
+      top: -280px;
+      left: -210px;
+      z-index: -1;
+      @include box-shadow-default();
+    }
+  }
+
+  .remarks-body {
+    max-height: calc(100vh - 142px);
+    overflow: auto;
+    padding-bottom: 30px;
+  }
+
+  .remarks-footer {
+    position: absolute;
+    width: 100%;
+    background: $white;
+    bottom: 0;
+    @include box-shadow-default();
+  }
+
+  .remarks-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    .form-group {
+      display: inline-flex;
+
+      &:first-child {
+        width: 80%;
+      }
+
+      &:last-child {
+        width: calc(100% - 80%);
+      }
+
+      button.btn {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  &.remarks-show {
+    right: -440px;
+  }
+}
+.remarks-info {
+  ul.remarks-list {
+    padding: 0px;
+    margin: 0 auto;
+    display: block;
+    list-style: none;
+
+    li {
+      margin-top: 20px;
+      padding-bottom: 20px;
+      .chat-date {
+        font-family: $font-lato-semibold;
+        color: $brand-primary-text;
+        font-size: 120%;
+        margin-bottom: 10px;
+      }
+      .chat-ui {
+        margin: 10px auto;
+        .chat-box {
+          display: flex;
+          padding-right: 10px;
+
+          .chat-icon {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+
+            .chat-user {
+              display: block;
+
+              span {
+                display: flex;
+                height: 30px;
+                width: 30px;
+                margin-right: 10px;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(90deg, #1e3b58, #32577e);
+                color: $white;
+                border-radius: 50%;
+                font-weight: bold;
+                @include box-shadow-default();
+              }
+            }
+          }
+
+          .chat-text {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+
+            .chat-desh {
+              display: flex;
+              flex: 1;
+              position: relative;
+              min-width: 200px;
+              border-radius: 10px;
+              padding: 10px;
+              background: $white;
+              @include box-shadow-default();
+
+              .cheat-desh-box {
+                display: block;
+              }
+
+              .chat-u-name {
+                color: $black;
+                font-family: $font-lato-semibold;
+                font-size: 80%;
+                margin-bottom: 6px;
+                .chat-u-team {
+                  background-color: green($color: #000000);
+                }
+              }
+
+              .chat-desh-box {
+                word-break: break-all;
+                color: $brand-primary-text;
+              }
+
+              .chat-time {
+                position: absolute;
+                top: 0;
+                right: 10px;
+                color: gray;
+                font-size: 80%;
+                margin-top: 9px;
+                z-index: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

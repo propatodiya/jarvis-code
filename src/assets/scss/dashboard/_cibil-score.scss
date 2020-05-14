@@ -1,0 +1,120 @@
+.cibil-card {
+  .cibil-partner {
+    .wizard-navigation {
+      &.cibil-wizard-navigation {
+        .nav-item {
+          margin-top: 5px;
+          margin-bottom: 5px;
+          .nav-link {
+            margin: 0px 5px;
+            padding: 10px 30px;
+            &.active {
+              color: rgb(255, 255, 255);
+              background: rgb(31, 60, 89);
+            }
+          }
+        }
+      }
+    }
+    ul {
+      justify-content: center;
+    }
+    .tab-content {
+      .tab-panel {
+        display: block;
+
+        .emi-summary {
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          border-bottom: none;
+          color: $white;
+          align-items: center;
+          margin: 10px auto;
+          @include linear-gradient-default-deg(140deg);
+
+          .emi-summary-label {
+            text-align: center;
+            margin: auto;
+            font-family: $font-lato-semibold;
+          }
+
+          .emi-summary-buttons {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+
+            .add-emi {
+              margin: 10px 10px;
+            }
+          }
+        }
+
+        .action-buttons {
+          .save-button {
+          }
+        }
+      }
+
+      .upto-installments {
+        margin: 10px auto;
+        width: 100%;
+      }
+
+      .personal-details-header {
+        color: rgb(255, 255, 255);
+        font-size: 130%;
+        text-transform: uppercase;
+        padding: 10px;
+        margin: 10px auto 0px auto;
+        @include linear-gradient-default-deg(140deg);
+      }
+
+      .remark-outline {
+        .tool-tip-custom {
+        }
+        input {
+          border-radius: 5px;
+          border: 1px solid #cccccc;
+          height: 30px;
+          max-width: 100px;
+          width: 100px;
+          padding: 5px;
+        }
+      }
+
+      .dpd-parent {
+        display: flex;
+        flex-wrap: nowrap;
+        border: 1px solid #cccccc;
+        border-top: none;
+        overflow: scroll;
+
+        .dpd-date {
+          border-right: 1px solid #cccccc;
+          padding: 5px 5px;
+          text-align: center;
+        }
+      }
+    }
+    .nav-tabs {
+      border: 0;
+      border-radius: 3px;
+      padding: 0 15px;
+    }
+  }
+  .generic-table {
+    table.bank-stmt-table {
+      tbody {
+        tr {
+          td {
+            &.emi-summary-action {
+              text-align: center;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+    }
+  }
+}

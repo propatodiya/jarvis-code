@@ -1,0 +1,160 @@
+.main-panel {
+  .remarks {
+    position: fixed;
+    top: 80px;
+    right: 55px;
+    width: 260px;
+    height: calc(100vh - 95px);
+    transform: translate(0, 0);
+    background-color: $white;
+    border-radius: 4px;
+    z-index: 100;
+    padding: 0px;
+    @include box-shadow-default();
+    @include transition-all(0.5s, cubic-bezier(.1, 1.2, .3, 1));
+
+    .remarks-height {
+      height: calc(100% - 30px);
+    }
+
+    .remark-header {
+      cursor: pointer;
+
+      .remark-title {
+        overflow: hidden;
+      }
+
+      .remark-title-heading {
+        .maximize {
+          display: inline-block;
+          width: calc(100% - 40px);
+        }
+
+        .minimize {
+          display: inline-block;
+          width: 40px;
+          top: -2px;
+          position: relative;
+
+          span {
+            position: relative;
+            height: 4px;
+            display: block;
+            width: 21px;
+            margin: 0px auto;
+            border-radius: 30px;
+            @include linear-gradient-default-deg(140deg);
+          }
+        }
+
+        label {
+          margin: 0 auto;
+        }
+      }
+    }
+
+    app-remarks {
+      height: 100%;
+      padding: 0px;
+      overflow: hidden;
+
+      .remarks-card {
+        height: 100%;
+        width: 260px;
+        font-size: 0.8rem;
+
+        .remarks-info {
+          margin-top: 10px;
+          height: calc(50% - 20px);
+          overflow: auto;
+          padding: 0px 10px;
+        }
+
+        .remarks-form {
+          height: calc(50% - 20px);
+          overflow: auto;
+          padding: 0px 15px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+
+          ul.remarks-hastag {
+            padding: 0px;
+            margin: 0 auto;
+            list-style: none;
+
+            li {
+              input[type="radio"] {
+                display: none;
+
+                &+label {
+                  cursor: pointer;
+                  color: $brand-primary-text;
+                  text-align: center;
+                  font-size: $font-size-small;
+                  padding: 5px;
+                  background-color: rgba(232, 236, 239, 1);
+                  margin: 0 auto;
+                  border-radius: 3px;
+                  display: block;
+                }
+
+                &:checked+label {
+                  background: $brand-primary;
+                  color: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .minimized {
+    &.remarks {
+      top: calc(100% - 50px);
+      transform: translate(0px, -15px);
+      width: 90px;
+      height: 60px;
+
+      .maximize {
+        top: 0;
+        opacity: 1;
+        transition: opacity .3s .5s, top 0s .5s;
+
+        .remarks-height {
+          height: 0;
+        }
+      }
+
+      .window-remarks-placeholder {
+        display: none;
+      }
+
+      .remark-header {
+        .remark-title {
+          position: relative;
+          margin: 0 auto;
+          left: 0;
+        }
+
+        .remark-title-heading {
+          padding: 0px 15px;
+
+          .maximize {
+            width: 100%;
+            text-align: center;
+            top: -4px;
+            position: relative;
+          }
+
+          .minimize {
+            width: 0px;
+            visibility: hidden;
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}

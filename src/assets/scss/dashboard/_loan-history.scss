@@ -1,0 +1,257 @@
+.card-wizard {
+  .laon-history-card {
+    .card-body {
+      min-height: auto;
+    }
+  }
+}
+.laon-history-parent {
+  .comparative-error-block {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    .no-data{
+      .no-data-placeholder {
+        max-width: 500px;
+        margin: 0 auto;
+  
+        .placedolder-icon {
+          width: 100%;
+        }
+        .placedolder-text {
+          font-size: 200%;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          color: #801a20;
+        }
+      }
+    }
+  }
+  .laon-history-card {
+    .loan-paid-parent {
+      position: relative;
+      padding: 0px 0px 0px 15px;
+      margin: 5px auto;
+      width: 100px;
+
+      .loan-paid {
+      }
+
+      .amount {
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: $brand-tertiary;
+        border-radius: 5px;
+      }
+      &.total-loan-parent {
+        &:before {
+          background: $brand-primary;
+        }
+      }
+    }
+    .repayment-schedule {
+      margin: 30px 0px 20px 0px;
+      text-align: center;
+    }
+
+    .value-pointer-parent {
+      position: absolute;
+      top: 100%;
+
+      .value-pointer {
+        border-left: 2px solid $brand-primary;
+        border-top: 2px solid $brand-primary;
+        height: 50px;
+        width: 50px;
+      }
+    }
+    .loan-active-box {
+      position: relative;
+      z-index: 1;
+    }
+    .value-pointer-line-pending {
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        background: rgba(2, 71, 131, 1);
+        z-index: -1;
+        top: 50%;
+        left: calc(12.5% - 2px);
+      }
+      &::before {
+        width: calc(25% - 2px);
+        height: 2px;
+      }
+      &::after {
+        height: 50%;
+        width: 2px;
+      }
+    }
+
+    .value-pointer-line-paid {
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        background: rgba(2, 71, 131, 1);
+        z-index: -1;
+      }
+      &::before {
+        width: calc(25% - 2px);
+        height: 2px;
+        top: 50%;
+        left: calc(63.5% - 2px);
+      }
+      &::after {
+        height: 40%;
+        width: 2px;
+        left: calc(87.5% - 2px);
+        top: 11%;
+      }
+    }
+
+    .value-pointer-pending {
+      position: absolute;
+      top: 0%;
+      left: 73%;
+      width: 300px;
+      color: $brand-tertiary;
+    }
+
+    .value-pointer-paid {
+      position: absolute;
+      top: 100%;
+      color: $brand-primary;
+    }
+
+    .value-pointer-line-paid {
+    }
+
+    .active-loans-table {
+      border-left: 1px solid $light-white;
+
+      ul {
+        list-style-type: none;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      li {
+        flex: 0 0 50%;
+        padding: 5px 25px;
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid $light-white;
+
+        &:nth-child(odd) {
+          border-right: 1px solid $light-white;
+        }
+        &:nth-child(1),
+        &:nth-child(2) {
+          border-top: 0px;
+        }
+
+        .active-loans-title {
+          display: block;
+          font-size: 70%;
+          margin-bottom: 7px;
+        }
+        .active-loans-value {
+        }
+      }
+    }
+
+    .loan-history-tab {
+    }
+
+    .insights {
+      color: $brand-primary;
+      float: right;
+    }
+
+    .pd-parent {
+      margin: 15px auto;
+
+      .pd-loan-number {
+        width: 77px;
+        height: 32px;
+        background: $dark-white;
+        color: $body-bg;
+        border-radius: 5px 5px 0px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 5px;
+      }
+
+      .pd-number-align {
+        display: flex;
+        justify-content: space-between;
+
+        .pd-loan-number {
+          width: 77px;
+          height: 40px;
+          background: $dark-white;
+          color: $body-bg;
+          border-radius: 5px 5px 0px 0px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 10px 5px 0px 5px;
+        }
+
+        .pd-guarenter-number {
+          display: flex;
+          justify-content: flex-end;
+          margin: 0px 5px;
+
+          .gauranter {
+            background: #fafafa;
+            color: #164c84;
+            border-radius: 5px 5px 0px 0px;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+            margin: 4px 0px 0px 0px;
+            border: 1px solid $dark-white;
+            .nav-link {
+              background: #fafafa;
+              color: #164c84;
+              border-radius: 5px 5px 0px 0px;
+            }
+            .active {
+              background: #164c84;
+              color: #fafafa;
+            }
+          }
+        }
+      }
+      .pd-general-details {
+        width: 100%;
+        border-top: 10px solid $dark-white;
+        border-bottom: 10px solid $dark-white;
+        border-radius: 5px;
+        box-shadow: $bmd-shadow-2dp;
+        padding: 0px 10px;
+
+        .pd-general-label {
+          color: $brand-primary;
+          font-weight: bold;
+          padding-bottom: 15px;
+          margin: 20px 0 0 0;
+          border-bottom: 1px solid $light-white;
+        }
+      }
+    }
+  }
+}

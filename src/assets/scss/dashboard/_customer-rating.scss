@@ -1,0 +1,55 @@
+.rating-guide-header{
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px 0px 0px 0px;
+    padding: 0px 10px;
+
+    li{
+        flex: 0 0 50%;
+        border: 1px solid grey;
+        padding: 1em;
+        display: flex;
+        align-items: flex-end;
+    }
+}
+.rating-guide-data{
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px 10px;
+
+    li{
+        flex: 0 0 50%;
+        border: 1px solid grey;
+        padding: 1em;
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+.loan-rec-header{
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
+
+    li{
+        flex: 0 0 50%;
+        border: 0px solid grey;
+        padding: 1em;
+        display: flex;
+        align-items: flex-end;
+    }
+
+}
+
+.note-title{
+    padding: 0px 10px;
+    margin: 10px 0px;
+}

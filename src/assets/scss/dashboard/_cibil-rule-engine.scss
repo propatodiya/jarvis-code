@@ -1,0 +1,64 @@
+.cibil-rule-engine-parent{
+
+
+    .cre-select-option{
+        display: flex;
+        flex-wrap: wrap;
+
+        .select-lable{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: 16px;
+            font-weight: 500;
+            margin: 15px;
+        }
+
+        .cre-tab{
+            width: 150px;
+            border-radius: 30px;
+            padding: 15px;
+            text-align: center;
+            margin: 10px;
+            box-shadow: $bmd-shadow-2dp;
+            cursor: pointer;
+        }
+
+        .active-button{
+            width: 150px;
+            border-radius: 30px;
+            padding: 15px;
+            text-align: center;
+            margin: 10px;
+            box-shadow: $bmd-shadow-2dp;
+            cursor: pointer;
+            color: #ffffff;
+            background: $brand-success;
+        }
+    }
+
+    .cibil-rule-engine-data{
+        display: flex;
+        flex-wrap: wrap;
+        
+        .cre-status{
+            display: flex;
+            flex-wrap: nowrap;
+            box-shadow: $bmd-shadow-2dp;
+            margin: 15px;
+
+            .cre-status-label{
+                padding: 15px 10px;
+            }
+
+            .cre-status-value{
+                padding: 15px 10px;
+                color: #ffffff;
+                background: $brand-success;
+            }
+            .status-danger{
+                background: $brand-danger;
+            }
+        }
+    }
+}

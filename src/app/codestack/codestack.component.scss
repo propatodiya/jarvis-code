@@ -1,0 +1,116 @@
+.spacer {
+  flex: 1;
+}
+
+.toolbar {
+  height: 60px;
+  margin: 0px -15px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(63, 81, 181);
+  color: white;
+  font-weight: 600;
+
+  span.logo {
+    position: relative;
+
+    img {
+      margin: 0 16px;
+      z-index: 1;
+      position: relative;
+      filter: invert(100);
+    }
+
+    &::after {
+      content: '';
+      background: #000;
+      height: 10px;
+      width: 10px;
+      position: absolute;
+      top: 20px;
+      left: 28px;
+      z-index: 0;
+      border-radius: 50%;
+    }
+  }
+}
+
+.content {
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .card-container {
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px 10px 0px 10px;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .18);
+    background: #fff;
+
+    .card {
+      margin: 10px auto;
+      padding: 10px;
+      border-radius: 2px;
+      background: #3b4758;
+      color: #fff;
+      box-shadow: none;
+      font-weight: bold;
+    }
+  }
+
+  .result {
+    width: 100%;
+
+    button {
+      display: inline-block;
+    }
+  }
+}
+
+
+.terminal {
+  position: relative;
+  width: calc(100% + 20px);
+  border-radius: 6px;
+  padding-top: 45px;
+  margin: 18px -10px 0px -10px;
+  overflow: hidden;
+  background-color: #0f0f10;
+
+  &::before {
+    content: "\2022 \2022 \2022";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: rgb(58, 58, 58);
+    color: #c2c3c4;
+    width: 100%;
+    font-size: 2rem;
+    line-height: 0;
+    padding: 14px 0;
+    text-indent: 4px;
+  }
+
+  pre {
+    line-height: 20px;
+    color: white;
+    padding: 0 1rem 1rem;
+    margin: 0;
+
+    a {
+      color: #6cff13;
+    }
+  }
+}
+
+
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {}
+
+@media screen and (max-width: 575px) {}

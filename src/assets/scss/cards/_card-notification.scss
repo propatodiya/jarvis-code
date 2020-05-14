@@ -1,0 +1,467 @@
+.notification-icon {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  top: -10px;
+  left: 20px;
+  background: $black;
+  margin: 0 auto;
+  border-radius: 4px;
+  padding: 5px;
+  text-align: center;
+  @include box-shadow-default();
+}
+
+.notification-header {
+  padding: 7px 15px 0px 70px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.dash-notification {
+  .card {
+    margin: 10px auto;
+    height: calc(100% - 20px);
+    padding-bottom: 34px;
+    @include box-shadow-default();
+    .card-header {
+      @extend .notification-header;
+      .card-title {
+        @extend .notification-icon;
+        &[title-background-color="blue"] {
+          @include linear-gradient-default-deg(140deg);
+        }
+        &[title-background-color="red"] {
+          @include linear-gradient-deg(140deg, rgba(128, 5, 0, 1), rgba(201, 43, 5, 1));
+        }
+        &[title-background-color="orange"] {
+          @include linear-gradient-deg(140deg, rgba(249, 99, 50, 1), rgba(245, 81, 69, 1));
+        }
+        i {
+          color: $white;
+        }
+      }
+      .card-title-heading {
+        color: $brand-primary-text;
+        text-align: right;
+        font-size: 12px;
+        ul.alert-info-list {
+          list-style-type: none;
+          text-align: left;
+          padding: 0px;
+          margin: 0 auto;
+          li {
+            padding-left: 15px;
+            position: relative;
+            label {
+              color: #112336;
+              font-size: 13px;
+              line-height: 24px;
+              display: block;
+              &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                height: 8px;
+                width: 8px;
+                background: rgba(249, 99, 50, 1);
+                border-radius: 100%;
+                top: calc(50% - 4px);
+              }
+            }
+          }
+        }
+      }
+    }
+    .card-body {
+      padding: 0px 15px;
+      text-align: left;
+      color: #112336;
+      font-size: 14px;
+      .is-toxic {
+        text-align: right;
+        label {
+          padding: 1px 7px;
+          border-radius: 2px;
+          &.cautious-profile {
+            color: $white;
+            @include linear-gradient-deg(100deg, rgba(255, 167, 38, 1), rgba(255, 152, 0, 1));
+          }
+          &.toxic-profile {
+            color: $white;
+            @include linear-gradient-deg(100deg, rgba(255, 167, 38, 1), rgba(255, 152, 0, 1));
+          }
+        }
+      }
+      .loan-button-box {
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        app-flex-button {
+          display: flex;
+          width: 100%;
+        }
+        button.btn.mat-button {
+          width: 100%;
+        }
+      }
+    }
+    .card-foot {
+      flex: 1 1 auto;
+      text-align: right;
+      color: $brand-primary-text;
+      font-size: 13px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 0px 15px 10px;
+    }
+    label {
+      margin: 0 auto;
+    }
+    &.height-auto {
+      height: auto;
+    }
+    &.loading-determinate {
+      position: absolute;
+      left: 15px;
+      z-index: 10;
+      width: calc(100% - 30px);
+      margin: 0 auto;
+      padding: 0px;
+      height: calc(100% - 10px);
+      padding: 10px;
+      box-shadow: none;
+      overflow: hidden;
+      &.loading-determinate-hidden {
+        @extend .fadeOutDown;
+        @include transition-all(0.5s, cubic-bezier(0.1, 1.2, 0.3, 1));
+        visibility: hidden;
+        z-index: -1;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.remark-header {
+  position: relative;
+  .remark-title {
+    @extend .notification-icon;
+    @include linear-gradient-default-deg(140deg);
+  }
+  .remark-title-heading {
+    @extend .notification-header;
+    padding-top: 5px;
+    color: $brand-primary-text;
+    overflow: hidden;
+    label {
+      margin: 0 auto;
+    }
+  }
+}
+
+.loan-button-box {
+  button.btn.mat-button {
+    margin: 0.3125rem;
+    box-shadow: none;
+    position: relative;
+    padding-left: 45px;
+    text-align: left;
+    font-family: $font-lato-semibold;
+
+    &:hover {
+      @include box-shadow-default();
+    }
+    i.fa {
+      position: absolute;
+      left: 10px;
+      display: flex;
+      width: 26px;
+      justify-content: center;
+      align-items: center;
+      height: calc(100% - (2 * 0.3125rem));
+      top: 0.3125rem;
+      margin: 0 auto;
+      border-right: 2px solid;
+      padding-right: 10px;
+      border-radius: 12px;
+    }
+    &.btn-round {
+      padding-left: 55px;
+      i.fa {
+        left: 20px;
+      }
+    }
+  }
+}
+.whats-app-icon {
+  display: inline-flex;
+  margin-right: 0;
+  margin-left: auto;
+  .w-icon {
+    span {
+      display: block;
+      width: 30px;
+      height: 30px;
+      margin-right: 0;
+      margin-left: auto;
+      cursor: pointer;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+.whats-app-block {
+  display: none;
+  position: fixed;
+  right: 40px;
+  z-index: 130;
+  background: rgb(255, 255, 255);
+  width: 310px;
+  top: 10%;
+  border-radius: 4px;
+  height: calc(100vh - 50px - 10%);
+  background-image: url("/assets/images/whatsapp_bg.png");
+  @include box-shadow-default();
+  app-whatsapp {
+    display: flex;
+    height: 100%;
+    .whatsapp-card {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+      position: relative;
+      .whatsapp-header {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        background-color: rgb(6, 94, 85);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        .whatsapp-avatar {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+          .w-profile {
+            margin-left: 10px;
+            span {
+              display: block;
+              width: 40px;
+              height: 40px;
+              margin-right: 0;
+              margin-left: auto;
+              cursor: pointer;
+              svg {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+          .w-time-log {
+            span {
+              display: block;
+              color: rgb(255, 255, 255);
+              font-size: 70%;
+              margin-top: 4px;
+              &:first-child {
+                font-weight: 700;
+              }
+            }
+          }
+          .whatsapp-doc {
+            display: flex;
+            .whatsapp-budge {
+              position: relative;
+              display: flex;
+              .budge-number {
+                position: absolute;
+                top: -10px;
+                background: rgb(255, 0, 0);
+                right: -10px;
+                border-radius: 50%;
+                width: 23px;
+                height: 23px;
+                color: rgb(255, 255, 255);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 600;
+              }
+            }
+          }
+          .whatsapp-options {
+            display: flex;
+            height: 100%;
+            width: 40px;
+            justify-content: center;
+            flex-flow: column;
+            cursor: pointer;
+            span.whatsapp-dots {
+              background: rgb(255, 255, 255);
+              height: 4px;
+              width: 4px;
+              border-radius: 50%;
+              margin: 2px auto;
+            }
+          }
+        }
+      }
+      .whatsapp-body {
+        display: flex;
+        width: 100%;
+        height: calc(100% - 100px);
+        overflow: auto;
+        .whats-app-data {
+          width: 100%;
+          ul {
+            width: 100%;
+            li {
+              position: relative;
+              padding: 10px 15px;
+              display: flex;
+              flex-flow: row;
+              align-items: center;
+              width: 100%;
+              font-size: 80%;
+              .message-box-info {
+                display: block;
+                text-align: center;
+                width: 100%;
+                .m-info {
+                  background-color: rgb(214, 229, 243);
+                  width: 100px;
+                  border-radius: 4px;
+                  font-size: 9px;
+                  text-align: center;
+                  padding: 5px 10px;
+                  line-height: 10px;
+                  margin: 0 auto;
+                }
+              }
+              .message-box {
+                @include box-shadow-default();
+              }
+              &.m-inbound {
+                .message-box {
+                  display: flex;
+                  background: rgb(255, 255, 255);
+                  justify-content: center;
+                  align-items: center;
+                  padding: 10px;
+                  position: relative;
+                  position: relative;
+                  border-radius: 8px;
+                  margin-right: auto;
+                  margin-left: 0px;
+                  max-width: 85%;
+                }
+                .message-inbound-tip {
+                  border-top: 20px solid rgb(255, 251, 251);
+                  border-left: 20px solid rgba(0, 0, 0, 0);
+                  position: absolute;
+                  top: 0px;
+                  left: -10px;
+                  border-top-left-radius: 6px;
+                }
+              }
+              &.m-inbound-attachment {
+                .message-attachment {
+                  width: 40px;
+                  margin-right: 10px;
+                  opacity: 0.4;
+                }
+                .metadata {
+                  display: inline-block;
+                  font-size: 70%;
+                  opacity: 0.4;
+                }
+              }
+              &.m-inbound-text {
+                .message-box {
+                  flex-flow: column;
+                }
+                .message-text {
+                  width: 100%;
+                  margin-right: 0;
+                }
+                .metadata {
+                  display: block;
+                  width: 100%;
+                  text-align: right;
+                  margin-top: 7px;
+                  font-size: 70%;
+                  opacity: 0.4;
+                }
+                .m-inbound-pwd {
+                  color: rgb(7, 114, 73);
+                }
+              }
+              &.m-outbound {
+                .message-box {
+                  display: flex;
+                  background: rgb(227, 255, 200);
+                  justify-content: center;
+                  align-items: center;
+                  padding: 10px;
+                  position: relative;
+                  border-radius: 8px;
+                  flex-flow: column;
+                  margin-right: 0px;
+                  margin-left: auto;
+                  max-width: 85%;
+                  .message-text {
+                    display: block;
+                    width: 100%;
+                  }
+                  .metadata {
+                    width: 100%;
+                    text-align: right;
+                    font-size: 70%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    .tick {
+                      margin-left: 7px;
+                    }
+                    .time {
+                      opacity: 0.4;
+                    }
+                  }
+                }
+                .message-outbound-tip {
+                  border-top: 20px solid rgb(227, 255, 200);
+                  border-right: 20px solid rgba(0, 0, 0, 0);
+                  position: absolute;
+                  top: 0px;
+                  right: -10px;
+                  border-top-right-radius: 6px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .whatsapp-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 5px;
+        .w-footer {
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  &.w-open {
+    display: block;
+  }
+}

@@ -1,0 +1,1304 @@
+<div class="row">
+  <div class="col-12">
+    <!-- Toolbar -->
+    <div class="toolbar" role="banner">
+      <span class="logo">
+        <img width="40" alt="Angular Logo" src="/assets/images/iron-man.png" /></span>
+      <span>JARVIS (Just A Rather Very Intelligent System)</span>
+    </div>
+    <div class="content" role="main">
+      <!-- Next Steps -->
+      <h2>Code Snippet</h2>
+      <!-- Button -->
+      <div class="card-container">
+        <div class="card card-small">
+          <span>Buttons</span>
+        </div>
+        <div class="result">
+          <button type="button" class="btn btn-primary btn-round mat-button">Primary</button>
+          <button type="button" class="btn btn-danger btn-round mat-button">Danger</button>
+          <button type="button" class="btn btn-success btn-round mat-button">Success</button>
+          <button type="button" class="btn btn-warning btn-round mat-button">Warning</button>
+          <button type="button" class="btn btn-info btn-round mat-button">Info</button>
+        </div>
+        <!-- Terminal -->
+        <div class="terminal">
+          <pre>
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-round mat-button&quot;&gt;Primary&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn-danger btn-round mat-button&quot;&gt;Danger&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn-success btn-round mat-button&quot;&gt;Success&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn-warning btn-round mat-button&quot;&gt;Warning&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn-info btn-round mat-button&quot;&gt;Info&lt;/button&gt;</pre>
+        </div>
+      </div>
+      <!-- Inputs -->
+      <div class="card-container">
+        <div class="card card-small">
+          <span>Inputs</span>
+        </div>
+        <div class="result">
+          <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="form-group label-floating">
+                <input autocomplete="off" class="form-control" type="text">
+                <label class="control-label">Input Placeholder</label>
+                <div class="error">
+                  <div class="error-message danger-text"> Error Display </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Terminal -->
+        <div class="terminal">
+          <pre>
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-xl-3 col-lg-4 col-md-6 col-sm-12&quot;&gt;
+            &lt;div class=&quot;form-group label-floating&quot; [ngClass]=&quot;{{ '{' }}'is-fill': formcontrol.controls['key'].value, 'is-invalid': !formcontrol.controls['key'].valid}&quot;&gt;
+                &lt;input autocomplete=&quot;off&quot; class=&quot;form-control&quot; formControlName=&quot;key&quot; type=&quot;text&quot;&gt;
+                &lt;label class=&quot;control-label&quot;&gt;Input Placeholder&lt;/label&gt;
+                &lt;div *ngIf=&quot;formcontrol.controls['key'].invalid &amp;&amp; (formcontrol.controls['key'].dirty &amp;&amp; formcontrol.controls['key'].touched)&quot; class=&quot;error&quot;&gt;
+                    &lt;div *ngIf=&quot;formcontrol.controls['key'].errors.required &amp;&amp; formcontrol.controls['key'].dirty&quot; class=&quot;error-message danger-text&quot;&gt; Error Display&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+       </pre>
+        </div>
+      </div>
+      <!-- Dropdown -->
+      <div class="card-container">
+        <div class="card card-small">
+          <span>Dropdown</span>
+        </div>
+        <div class="result">
+          <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="form-group label-floating">
+                <ng-select [items]="itemForSelect" bindLabel="label" bindValue="key" [autoCorrect]="'on'" [clearable]='true' placeholder="PlaceHolder"></ng-select>
+                <div class="error">
+                  <div class="error-message danger-text">Select '{{'Value'}}' </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Terminal -->
+        <div class="terminal">
+          <pre>
+      &lt;div class=&quot;row&quot;&gt;
+          &lt;div class=&quot;col-xl-3 col-lg-4 col-md-6 col-sm-12&quot;&gt;
+              &lt;div class=&quot;form-group label-floating&quot; [ngClass]=&quot;{{ '{' }}'is-fill': formcontrol.controls['key'].value, 'is-invalid': !formcontrol.controls['key'].valid}&quot;&gt;
+                  &lt;ng-select [items]=&quot;itemForSelect&quot; bindLabel=&quot;label&quot; bindValue=&quot;key&quot; [autoCorrect]=&quot;'on'&quot; [clearable]='true' placeholder=&quot;Document Type&quot; formControlName='key'&gt;&lt;/ng-select&gt;
+                  &lt;div *ngIf=&quot;formcontrol.controls['key'].invalid &amp;&amp; (formcontrol.controls['key'].dirty &amp;&amp; formcontrol.controls['key'].touched)&quot; class=&quot;error&quot;&gt;
+                      &lt;div *ngIf=&quot;formcontrol.controls['key'].errors.required &amp;&amp; formcontrol.controls['key'].dirty&quot; class=&quot;error-message danger-text&quot;&gt;Select '{{'Value'}}'&lt;/div&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      @More Info https://www.npmjs.com/package/@ng-select/ng-select <a href="https://www.npmjs.com/package/@ng-select/ng-select" target="_blank"> -- > Click here for more Config</a>
+     </pre>
+        </div>
+      </div>
+      <!-- Wizard Navigation -->
+      <div class="card-container">
+        <div class="card card-small">
+          <span>Wizard Navigation</span>
+        </div>
+        <div class="result">
+          <div class="row">
+            <div class="col-12">
+              <div class="card-wizard" data-color="primary">
+                <div class="wizard-navigation">
+                  <ul class="nav nav-pills row m-0 p-0" #demowizard>
+                    <li class="nav-item col p-0">
+                      <a class="nav-link" href="javascript:void(0)" (click)="movingTab('Primary Tab', 0)" data-toggle="tab" role="tab"> Primary Tab </a>
+                    </li>
+                    <li class="nav-item col p-0">
+                      <a class="nav-link" href="javascript:void(0)" (click)="movingTab('Secoundry Tab', 1)" data-toggle="tab" role="tab"> Secoundry Tab </a>
+                    </li>
+                    <li class="nav-item col p-0">
+                      <a class="nav-link" href="javascript:void(0)" (click)="movingTab('Third Tab', 2)" data-toggle="tab" role="tab"> Third Tab </a>
+                    </li>
+                    <span class="moving-tab">{{activeTab}}</span>
+                  </ul>
+                </div>
+                <div class="card-body row p-0">
+                  <div class="tab-content col-12 justify-content-center pt-3" [ngSwitch]="activeTab">
+                    <pre *ngSwitchCase="'Primary Tab'">Primary Component</pre>
+                    <pre *ngSwitchCase="'Secoundry Tab'">Secoundry Component</pre>
+                    <pre *ngSwitchCase="'Third Tab'">Third Component</pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Terminal -->
+        <div class="terminal">
+          <pre>
+        import {{ '{' }} Component, OnInit, ViewChild, ViewChildren, ElementRef, HostListener, AfterViewChecked } from '@angular/core';
+        declare const $: any;
+        YourComponent implements OnInit, AfterViewChecked {{ '{' }}
+            public activeIndex = 0;
+            public nativeElement: any;
+            private wizardList: any;
+            public wizardWidth = 0;
+            public activeTab = 'Primary Tab';
+            @ViewChild('demowizard', {{ '{' }} static: true }) myDiv: ElementRef;
+
+            @ViewChildren('demowizard') set inputF(wizard: any) {{ '{' }}
+              this.nativeElement = wizard.first.nativeElement;
+            }
+
+            movingTab(activeTab: any, index: number) {{ '{' }}
+              this.activeIndex = index;
+              this.activeTab = activeTab as any;
+              this.wizardList = this.nativeElement.querySelectorAll('li') as Array&lt;any&gt;;
+              const movingPosition = $(this.wizardList[this.activeIndex]).position();
+              let movingWidth = this.wizardList[this.activeIndex].offsetWidth;
+              movingPosition.left = movingPosition.left - 10;
+              movingWidth = movingWidth + 20;
+              $('.moving-tab').css({{ '{' }} transform: 'translate3d(' + movingPosition.left + 'px, ' + movingPosition.top + 'px, 0)', width: movingWidth + 'px', opacity: 1 });
+              this.wizardWidth = this.myDiv.nativeElement.offsetWidth;
+          }
+          ngAfterViewChecked() {{'{'}}
+            setTimeout( () => {{'{'}}
+              if (this.wizardWidth !== this.myDiv.nativeElement.offsetWidth) {{'{'}}
+                this.movingTab(this.activeTab, this.activeIndex);
+              }
+            }, 200);
+          }
+
+          @HostListener('window:resize', ['$event'])
+          onResize() {{'{'}}
+            this.movingTab(this.activeTab, this.activeIndex);
+          }
+        }
+
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-12&quot;&gt;
+                &lt;div class=&quot;card-wizard&quot; data-color=&quot;primary&quot;&gt;
+                &lt;div class=&quot;wizard-navigation&quot;&gt;
+                    &lt;ul class=&quot;nav nav-pills row m-0 p-0&quot; #demowizard&gt;
+                    &lt;li class=&quot;nav-item col p-0&quot;&gt;
+                        &lt;a class=&quot;nav-link&quot; href=&quot;javascript:void(0)&quot; (click)=&quot;movingTab('Primary Tab', 0)&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Primary Tab&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;nav-item col p-0&quot;&gt;
+                        &lt;a class=&quot;nav-link&quot; href=&quot;javascript:void(0)&quot; (click)=&quot;movingTab('Secoundry Tab', 1)&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Secoundry Tab&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;nav-item col p-0&quot;&gt;
+                        &lt;a class=&quot;nav-link&quot; href=&quot;javascript:void(0)&quot; (click)=&quot;movingTab('Third Tab', 2)&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Third Tab&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;span class=&quot;moving-tab&quot;&gt;{{'{'}}{{'{'}}activeTab}}&lt;/span&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-body row p-0&quot;&gt;
+                    &lt;div class=&quot;tab-content col-12 justify-content-center pt-3&quot; [ngSwitch]=&quot;activeTab&quot;&gt;
+                    &lt;pre *ngSwitchCase=&quot;'Primary Tab'&quot;&gt;Primary Component&lt;/pre&gt;
+                    &lt;pre *ngSwitchCase=&quot;'Secoundry Tab'&quot;&gt;Secoundry Component&lt;/pre&gt;
+                    &lt;pre *ngSwitchCase=&quot;'Third Tab'&quot;&gt;Third Component&lt;/pre&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+     </pre>
+        </div>
+      </div>
+      <!-- Notifications Toaster -->
+      <div class="card-container">
+        <div class="card card-small">
+          <span>Notifications Toaster</span>
+        </div>
+        <div class="result">
+          <button type="button" (click)="openToaster('s-0')" class="btn btn-primary btn-round mat-button">Success</button>
+          <button type="button" (click)="openToaster('d-0')" class="btn btn-danger btn-round mat-button">Danger</button>
+          <button type="button" (click)="openToaster('w-0')" class="btn btn-warning btn-round mat-button">Warning</button>
+          <button type="button" (click)="openToaster('i-0')" class="btn btn-info btn-round mat-button">Info</button>
+          <button type="button" (click)="openToaster('s-1')" class="btn btn-primary btn-round mat-button">Success TimeOut</button>
+          <button type="button" (click)="openToaster('d-1')" class="btn btn-danger btn-round mat-button">Danger TimeOut</button>
+          <button type="button" (click)="openToaster('w-1')" class="btn btn-warning btn-round mat-button">Warning TimeOut</button>
+          <button type="button" (click)="openToaster('i-1')" class="btn btn-info btn-round mat-button">Info TimeOut</button>
+        </div>
+        <!-- Terminal -->
+        <div class="terminal">
+          <pre>
+        import {{'{'}} ToastrMsgService } from './../../../_eventifier';
+        YourComponent implements OnInit {{ '{' }}
+          constructor(public toastr: ToastrMsgService) {{ '{' }}  }
+
+        }
+
+        this.toastr.successMsg('This is success message');
+        this.toastr.successTimeOut('This is success message with timeout');
+        this.toastr.warningMsg('This is success message');
+        this.toastr.warningTimeOut('This is success message with timeout');
+        this.toastr.infoMsg('This is success message');
+        this.toastr.infoTimeOut('This is success message with timeout');
+        this.toastr.errorMsg('This is success message');
+        this.toastr.errorTimeOut('This is success message with timeout');
+ </pre>
+        </div>
+      </div>
+      <!-- Collapse -->
+      <div class="card-container">
+        <div class="card card-small">
+          <span>Collapse</span>
+        </div>
+        <div class="result">
+          <div class="row">
+            <div class="col-12">
+              <div id="parentid" role="tablist">
+                <div class="card-collapse">
+                  <div class="card-header" role="tab">
+                    <a class="card-link" data-toggle="collapse" href="#oneId" aria-controls="collapseOne" aria-expanded="false">
+                      <div class="card-link-title">
+                        <span class="accordion-arrow"><i class="caret"></i></span>
+                        <span class="document-title">Item 1</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div id="oneId" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#parentid">
+                    <div class="card-body"> Your Code </div>
+                  </div>
+                </div>
+                <div class="card-collapse">
+                  <div class="card-header" role="tab">
+                    <a class="card-link" data-toggle="collapse" href="#twoId" aria-controls="collapseOne" aria-expanded="false">
+                      <div class="card-link-title">
+                        <span class="accordion-arrow"><i class="caret"></i></span>
+                        <span class="document-title">Item 2</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div id="twoId" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#parentid">
+                    <div class="card-body"> Your Code </div>
+                  </div>
+                </div>
+                <div class="card-collapse">
+                  <div class="card-header" role="tab">
+                    <a class="card-link" data-toggle="collapse" href="#threeId" aria-controls="collapseOne" aria-expanded="false">
+                      <div class="card-link-title">
+                        <span class="accordion-arrow"><i class="caret"></i></span>
+                        <span class="document-title">Item 3</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div id="threeId" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#parentid">
+                    <div class="card-body"> Your Code </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Terminal -->
+        <div class="terminal">
+          <pre>
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-12&quot;&gt;
+          &lt;div id=&quot;parentid&quot; role=&quot;tablist&quot;&gt;
+            &lt;div class=&quot;card-collapse&quot;&gt;
+              &lt;div class=&quot;card-header&quot; role=&quot;tab&quot;&gt;
+                &lt;a class=&quot;card-link&quot; data-toggle=&quot;collapse&quot; href=&quot;#oneId&quot; aria-controls=&quot;collapseOne&quot; aria-expanded=&quot;false&quot;&gt;
+                  &lt;div class=&quot;card-link-title&quot;&gt;
+                    &lt;span class=&quot;accordion-arrow&quot;&gt;&lt;i class=&quot;caret&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;span class=&quot;document-title&quot;&gt;Item 1&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/a&gt;
+              &lt;/div&gt;
+              &lt;div id=&quot;oneId&quot; class=&quot;collapse&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;headingOne&quot; data-parent=&quot;#parentid&quot;&gt;
+                &lt;div class=&quot;card-body&quot;&gt;
+                  Your Code
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-collapse&quot;&gt;
+              &lt;div class=&quot;card-header&quot; role=&quot;tab&quot;&gt;
+                &lt;a class=&quot;card-link&quot; data-toggle=&quot;collapse&quot; href=&quot;#twoId&quot; aria-controls=&quot;collapseOne&quot; aria-expanded=&quot;false&quot;&gt;
+                  &lt;div class=&quot;card-link-title&quot;&gt;
+                    &lt;span class=&quot;accordion-arrow&quot;&gt;&lt;i class=&quot;caret&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;span class=&quot;document-title&quot;&gt;Item 2&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/a&gt;
+              &lt;/div&gt;
+              &lt;div id=&quot;twoId&quot; class=&quot;collapse&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;headingOne&quot; data-parent=&quot;#parentid&quot;&gt;
+                &lt;div class=&quot;card-body&quot;&gt;
+                  Your Code
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-collapse&quot;&gt;
+              &lt;div class=&quot;card-header&quot; role=&quot;tab&quot;&gt;
+                &lt;a class=&quot;card-link&quot; data-toggle=&quot;collapse&quot; href=&quot;#threeId&quot; aria-controls=&quot;collapseOne&quot; aria-expanded=&quot;false&quot;&gt;
+                  &lt;div class=&quot;card-link-title&quot;&gt;
+                    &lt;span class=&quot;accordion-arrow&quot;&gt;&lt;i class=&quot;caret&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;span class=&quot;document-title&quot;&gt;Item 3&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/a&gt;
+              &lt;/div&gt;
+              &lt;div id=&quot;threeId&quot; class=&quot;collapse&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;headingOne&quot; data-parent=&quot;#parentid&quot;&gt;
+                &lt;div class=&quot;card-body&quot;&gt;
+                  Your Code
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+ </pre>
+        </div>
+      </div>
+      <!-- Radio Button -->
+      <div class="card-container">
+        <div class="card card-small">
+          <span>Radio Button</span>
+        </div>
+        <div class="result">
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group label-floating form-group-radio">
+                <label class="control-label">Gender</label>
+                <div class="radio form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gender" value="male"> Male <span class="circle">
+                      <span class="check"></span>
+                    </span>
+                  </label>
+                </div>
+                <div class="radio form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gender" value="female"> Female <span class="circle">
+                      <span class="check"></span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Terminal -->
+        <div class="terminal">
+          <pre>
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-12&quot;&gt;
+          &lt;div class=&quot;form-group label-floating form-group-radio&quot;&gt;
+            &lt;label class=&quot;control-label&quot;&gt;Gender&lt;/label&gt;
+            &lt;div class=&quot;radio form-check&quot;&gt;
+              &lt;label class=&quot;form-check-label&quot;&gt;
+                &lt;input class=&quot;form-check-input&quot; formControlName=&quot;gender&quot; type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;Male&quot;&gt; Male
+                &lt;span class=&quot;circle&quot;&gt;
+                  &lt;span class=&quot;check&quot;&gt;&lt;/span&gt;
+                &lt;/span&gt;
+              &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;radio form-check&quot;&gt;
+              &lt;label class=&quot;form-check-label&quot;&gt;
+                &lt;input class=&quot;form-check-input&quot; formControlName=&quot;gender&quot; type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;female&quot;&gt; Female
+                &lt;span class=&quot;circle&quot;&gt;
+                  &lt;span class=&quot;check&quot;&gt;&lt;/span&gt;
+                &lt;/span&gt;
+              &lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+ </pre>
+        </div>
+      </div>
+      <!-- Checkbox -->
+      <div class="card-container">
+        <div class="card card-small">
+          <span>Checkbox</span>
+        </div>
+        <div class="result">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" value="key">
+                  <span class="form-check-sign">
+                    <span class="check"></span>
+                  </span>
+                  <span class="form-check-text">item 1</span>
+                </label>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" value="key2">
+                  <span class="form-check-sign">
+                    <span class="check"></span>
+                  </span>
+                  <span class="form-check-text">item 2</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Terminal -->
+        <div class="terminal">
+          <pre>
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-12&quot;&gt;
+          &lt;div class=&quot;form-check&quot;&gt;
+            &lt;label class=&quot;form-check-label&quot;&gt;
+              &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;key&quot;&gt;
+              &lt;span class=&quot;form-check-sign&quot;&gt;
+                &lt;span class=&quot;check&quot;&gt;&lt;/span&gt;
+              &lt;/span&gt;
+              &lt;span class=&quot;form-check-text&quot;&gt;label&lt;/span&gt;
+            &lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+ </pre>
+        </div>
+      </div>
+      <!-- Textarea -->
+      <div class="card-container">
+        <div class="card card-small">
+          <span>Textarea</span>
+        </div>
+        <div class="result">
+          <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="form-group label-floating">
+                <textarea autocomplete="off" class="form-control" type="text"></textarea>
+                <label class="control-label">Input Placeholder</label>
+                <div class="error">
+                  <div class="error-message danger-text"> Error Display </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Terminal -->
+        <div class="terminal">
+          <pre>
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-xl-3 col-lg-4 col-md-6 col-sm-12&quot;&gt;
+          &lt;div class=&quot;form-group label-floating&quot;&gt;
+            &lt;textarea autocomplete=&quot;off&quot; class=&quot;form-control&quot; type=&quot;text&quot;&gt;&lt;/textarea&gt;
+            &lt;label class=&quot;control-label&quot;&gt;Input Placeholder&lt;/label&gt;
+            &lt;div class=&quot;error&quot;&gt;
+              &lt;div class=&quot;error-message danger-text&quot;&gt; Error Display
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+ </pre>
+        </div>
+      </div>
+      <!-- Modal Popup -->
+      <div class="card-container">
+        <div class="card card-small">
+          <span>Modal Popup</span>
+        </div>
+        <div class="result">
+          <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <button type="button" class="btn btn-primary btn-round mat-button" data-toggle="modal" data-target="#demoModel">Open md Model</button>
+              <button type="button" class="btn btn-primary btn-round mat-button" data-toggle="modal" data-target="#demoModel2">Open lg Model</button>
+            </div>
+          </div>
+          <!-- The Modal -->
+          <div class="modal fade" id="demoModel" role="dialog" aria-hidden="true" tabindex="-1" #demoModel>
+            <div class="modal-dialog modal-md">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Modal Title</h4>
+                  <button type="button" class="close mat-button" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <form [formGroup]="" class="ngform mb-0">
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group"> Code here </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-round mat-button" data-dismiss="demoModel">Close</button>
+                    <button type="submit" class="btn btn-primary btn-round mat-button">submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- The Modal -->
+          <div class="modal fade" id="demoModel2" role="dialog" aria-hidden="true" tabindex="-1" #demoModel2>
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Modal Title</h4>
+                  <button type="button" class="close mat-button" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <form [formGroup]="" class="ngform mb-0">
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group"> Code here </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-round mat-button" data-dismiss="demoModel">Close</button>
+                    <button type="submit" class="btn btn-primary btn-round mat-button">submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Terminal -->
+        <div class="terminal">
+          <pre>
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-round mat-button&quot; data-toggle=&quot;modal&quot; data-target=&quot;#demoModel&quot;&gt;Open md Model&lt;/button&gt;
+
+      &lt;div class=&quot;modal fade&quot; id=&quot;demoModel&quot; role=&quot;dialog&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot; #demoModel&gt;
+        &lt;div class=&quot;modal-dialog modal-md&quot;&gt;
+          &lt;div class=&quot;modal-content&quot;&gt;
+            &lt;!-- Modal Header --&gt;
+            &lt;div class=&quot;modal-header&quot;&gt;
+              &lt;h4 class=&quot;modal-title&quot;&gt;Modal Title&lt;/h4&gt;
+              &lt;button type=&quot;button&quot; class=&quot;close mat-button&quot; data-dismiss=&quot;modal&quot;&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;!-- Modal body --&gt;
+            &lt;form class=&quot;ngform mb-0&quot;&gt;
+              &lt;div class=&quot;modal-body&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                  &lt;div class=&quot;col&quot;&gt;
+                    &lt;div class=&quot;form-group&quot;&gt;
+                      Code here
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;!-- Modal footer --&gt;
+              &lt;div class=&quot;modal-footer&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-danger btn-round mat-button&quot; data-dismiss=&quot;demoModel&quot;&gt;Close&lt;/button&gt;
+                &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary btn-round mat-button&quot;&gt;submit&lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/form&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+ </pre>
+        </div>
+      </div>
+      <!-- Create Reactive Form -->
+      <div class="card-container">
+        <div class="card card-small">
+          <span>Create Reactive Form</span>
+        </div>
+        <div class="result">
+          <div class="row m-0">
+            <div class="col">
+              <form class="ngform" [formGroup]="demoForm" (ngSubmit)="demoFormUpdate()">
+                <div class="row">
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12" formGroupName="loanApplicant">
+                    <div class="form-group label-floating" [ngClass]="{'is-fill': demoForm.get('loanApplicant').get('name').value, 'is-invalid': !demoForm.get('loanApplicant').get('name').valid }">
+                      <input autocomplete="off" class="form-control" formControlName="name" type="text">
+                      <label class="control-label">Full Name <sub>(As per PAN)</sub> </label>
+                      <div *ngIf="demoForm.get('loanApplicant').get('name').invalid && (demoForm.get('loanApplicant').get('name').dirty && demoForm.get('loanApplicant').get('name').touched)" class="error">
+                        <div *ngIf="demoForm.get('loanApplicant').get('name').hasError('required') && demoForm.get('loanApplicant').get('name').dirty" class="error-message danger-text">Enter Full Name (As per PAN) </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="form-group label-floating" [ngClass]="{'is-fill': demoForm.controls['mobile'].value, 'is-invalid': !demoForm.controls['mobile'].valid}">
+                      <input autocomplete="off" class="form-control" formControlName="mobile" type="text" maxlength="10" minlength="10">
+                      <label class="control-label">Mobile No</label>
+                      <div *ngIf="demoForm.controls['mobile'].invalid && (demoForm.controls['mobile'].dirty && demoForm.controls['mobile'].touched)" class="error">
+                        <div *ngIf="demoForm.controls['mobile'].errors.required && demoForm.controls['mobile'].dirty" class="error-message danger-text">Enter your mobile </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="form-group label-floating" [ngClass]="{'is-fill': demoForm.controls['email'].value, 'is-invalid': !demoForm.controls['email'].valid}">
+                      <input autocomplete="off" class="form-control" formControlName="email" type="text">
+                      <label class="control-label">Email</label>
+                      <div *ngIf="demoForm.controls['email'].invalid && (demoForm.controls['email'].dirty && demoForm.controls['email'].touched)" class="error">
+                        <div *ngIf="demoForm.controls['email'].errors.required && demoForm.controls['email'].dirty" class="error-message danger-text">Enter your email </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12" formGroupName="loanApplicant">
+                    <div class="form-group label-floating" [ngClass]="{'is-fill': demoForm.get('loanApplicant').get('pan_no').value, 'is-invalid': !demoForm.get('loanApplicant').get('pan_no').valid}">
+                      <input autocomplete="off" class="form-control text-uppercase" formControlName="pan_no" type="text" maxlength="10" minlength="10">
+                      <label class="control-label">Pan No </label>
+                      <div *ngIf="demoForm.get('loanApplicant').get('pan_no').invalid && (demoForm.get('loanApplicant').get('pan_no').dirty && demoForm.get('loanApplicant').get('pan_no').touched)" class="error">
+                        <div *ngIf="demoForm.get('loanApplicant').get('pan_no').hasError('required') && demoForm.get('loanApplicant').get('pan_no').dirty" class="error-message danger-text">Enter Pan No </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12" formGroupName="loanApplicant">
+                    <div class="form-group label-floating" [ngClass]="{'is-fill': demoForm.get('loanApplicant').get('dob').value, 'is-invalid': !demoForm.get('loanApplicant').get('dob').valid}">
+                      <input autocomplete="off" class="form-control datepicker" formControlName="dob" type="text" maxlength="10" minlength="8">
+                      <label class="control-label">Date of Birth (As per PAN)</label>
+                      <span class="datepickerspan" data-datepicker="datepicker"></span>
+                      <div *ngIf="demoForm.get('loanApplicant').get('dob').invalid && (demoForm.get('loanApplicant').get('dob').dirty && demoForm.get('loanApplicant').get('dob').touched)" class="error">
+                        <div *ngIf="demoForm.get('loanApplicant').get('dob').hasError('required') && demoForm.get('loanApplicant').get('dob').dirty" class="error-message danger-text"> Select Date of Birth </div>
+                        <div *ngIf="demoForm.get('loanApplicant').get('dob').hasError('pattern')" class="error-message danger-text"> Enter valid Date </div>
+                        <div *ngIf="demoForm.get('loanApplicant').get('dob').hasError('minlength')" class="error-message danger-text"> Enter valid Date MIN </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12" formGroupName="loanApplicant">
+                    <div class="form-group label-floating form-group-radio">
+                      <label class="control-label">Gender</label>
+                      <div class="radio form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" formControlName="gender" type="radio" name="gender" value="male"> Male <span class="circle">
+                            <span class="check"></span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="radio form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" formControlName="gender" type="radio" name="gender" value="femail"> Female <span class="circle">
+                            <span class="check"></span>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12" formGroupName="loanApplicant">
+                    <div class="form-group label-floating" [ngClass]="{'is-fill': demoForm.get('loanApplicant').get('monthly_turnover').value, 'is-invalid': !demoForm.get('loanApplicant').get('monthly_turnover').valid}">
+                      <input autocomplete="off" class="form-control" formControlName="monthly_turnover" type="text">
+                      <label class="control-label">Monthly turnover</label>
+                      <div *ngIf="demoForm.get('loanApplicant').get('monthly_turnover').invalid && (demoForm.get('loanApplicant').get('monthly_turnover').dirty && demoForm.get('loanApplicant').get('monthly_turnover').touched)" class="error">
+                        <div *ngIf="demoForm.get('loanApplicant').get('monthly_turnover').hasError('required') && demoForm.get('loanApplicant').get('monthly_turnover').dirty" class="error-message danger-text">Enter Total Monthly Sales </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="form-group label-floating" [ngClass]="{'is-fill': demoForm.controls['amount'].value, 'is-invalid': !demoForm.controls['amount'].valid}">
+                      <input autocomplete="off" class="form-control" formControlName="amount" type="text">
+                      <label class="control-label">Loan Amount</label>
+                      <div *ngIf="demoForm.controls['amount'].invalid && (demoForm.controls['amount'].dirty && demoForm.controls['amount'].touched)" class="error">
+                        <div *ngIf="demoForm.controls['amount'].errors.required && demoForm.controls['amount'].dirty" class="error-message danger-text"> Enter Loan Amount </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col text-left">
+                    <div class="form-result">
+                      <span>Email: </span> {{demoForm.value.email}} </div>
+                    <div class="form-result">
+                      <span>Mobile: </span> {{demoForm.value.mobile}} </div>
+                    <div class="form-result">
+                      <span>Amount: </span> {{demoForm.value.amount}} </div>
+                    <div class="form-result">
+                      <span>LoanApplicant Name: </span> {{demoForm.value.loanApplicant.name}} </div>
+                    <div class="form-result">
+                      <span>LoanApplicant DOB: </span> {{demoForm.value.loanApplicant.dob}} </div>
+                    <div class="form-result">
+                      <span>LoanApplicant Gender: </span> {{demoForm.value.loanApplicant.gender}} </div>
+                    <div class="form-result">
+                      <span>LoanApplicant Pan No: </span> {{demoForm.value.loanApplicant.pan_no}} </div>
+                    <div class="form-result">
+                      <span>LoanApplicant Monthly Turnover: </span> {{demoForm.value.loanApplicant.monthly_turnover}} </div>
+                    <div class="form-result">
+                      <span>Valid ? </span> {{demoForm.valid}} </div>
+                  </div>
+                  <div class="col text-right">
+                    <button type="submit" class="btn btn-primary btn-round mat-button">Update</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Terminal -->
+        <div class="terminal">
+          <pre>
+        import {{'{'}} FormGroup, Validators, FormControl } from '@angular/forms';
+        private createDemoForm() {{'{'}}
+          this.demoForm = new FormGroup({{'{'}}
+            email: new FormControl(null, [Validators.required, Validators.pattern('[^ @]*@[^ @]*')]),
+            mobile: new FormControl(null, [Validators.required, Validators.maxLength(10), Validators.minLength(10)]),
+            amount: new FormControl(null, [Validators.required]),
+            loanApplicant: new FormGroup( {{'{'}}
+              name: new FormControl(null, [Validators.required]),
+              dob: new FormControl(null, [Validators.required, Validators.maxLength(10), Validators.minLength(8)]),
+              gender: new FormControl(null, [Validators.required]),
+              pan_no: new FormControl(null, [Validators.required]),
+              monthly_turnover: new FormControl(null, [Validators.required])
+            })
+          });
+        }
+
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col&quot;&gt;
+          &lt;form class=&quot;ngform&quot; [formGroup]=&quot;demoForm&quot; (ngSubmit)=&quot;demoFormUpdate()&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+              &lt;div class=&quot;col-xl-3 col-lg-4 col-md-6 col-sm-12&quot; formGroupName=&quot;loanApplicant&quot;&gt;
+                &lt;div class=&quot;form-group label-floating&quot; [ngClass]=&quot;{{'{'}}'is-fill': demoForm.get('loanApplicant').get('name').value, 'is-invalid': !demoForm.get('loanApplicant').get('name').valid }&quot;&gt;
+                  &lt;input autocomplete=&quot;off&quot; class=&quot;form-control&quot; formControlName=&quot;name&quot; type=&quot;text&quot;&gt;
+                  &lt;label class=&quot;control-label&quot;&gt;Full Name &lt;sub&gt;(As per PAN)&lt;/sub&gt; &lt;/label&gt;
+                  &lt;div *ngIf=&quot;demoForm.get('loanApplicant').get('name').invalid &amp;&amp; (demoForm.get('loanApplicant').get('name').dirty &amp;&amp; demoForm.get('loanApplicant').get('name').touched)&quot; class=&quot;error&quot;&gt;
+                    &lt;div *ngIf=&quot;demoForm.get('loanApplicant').get('name').hasError('required') &amp;&amp; demoForm.get('loanApplicant').get('name').dirty&quot; class=&quot;error-message danger-text&quot;&gt;Enter Full Name (As per PAN)
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-xl-3 col-lg-4 col-md-6 col-sm-12&quot;&gt;
+                &lt;div class=&quot;form-group label-floating&quot; [ngClass]=&quot;{{'{'}}'is-fill': demoForm.controls['mobile'].value, 'is-invalid': !demoForm.controls['mobile'].valid}&quot;&gt;
+                  &lt;input autocomplete=&quot;off&quot; class=&quot;form-control&quot; formControlName=&quot;mobile&quot; type=&quot;text&quot; maxlength=&quot;10&quot; minlength=&quot;10&quot;&gt;
+                  &lt;label class=&quot;control-label&quot;&gt;Mobile No&lt;/label&gt;
+                  &lt;div *ngIf=&quot;demoForm.controls['mobile'].invalid &amp;&amp; (demoForm.controls['mobile'].dirty &amp;&amp; demoForm.controls['mobile'].touched)&quot; class=&quot;error&quot;&gt;
+                    &lt;div *ngIf=&quot;demoForm.controls['mobile'].errors.required &amp;&amp; demoForm.controls['mobile'].dirty&quot; class=&quot;error-message danger-text&quot;&gt;Enter your mobile
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-xl-3 col-lg-4 col-md-6 col-sm-12&quot;&gt;
+                &lt;div class=&quot;form-group label-floating&quot; [ngClass]=&quot;{{'{'}}'is-fill': demoForm.controls['email'].value, 'is-invalid': !demoForm.controls['email'].valid}&quot;&gt;
+                  &lt;input autocomplete=&quot;off&quot; class=&quot;form-control&quot; formControlName=&quot;email&quot; type=&quot;text&quot;&gt;
+                  &lt;label class=&quot;control-label&quot;&gt;Email&lt;/label&gt;
+                  &lt;div *ngIf=&quot;demoForm.controls['email'].invalid &amp;&amp; (demoForm.controls['email'].dirty &amp;&amp; demoForm.controls['email'].touched)&quot; class=&quot;error&quot;&gt;
+                    &lt;div *ngIf=&quot;demoForm.controls['email'].errors.required &amp;&amp; demoForm.controls['email'].dirty&quot; class=&quot;error-message danger-text&quot;&gt;Enter your email
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-xl-3 col-lg-4 col-md-6 col-sm-12&quot; formGroupName=&quot;loanApplicant&quot;&gt;
+                &lt;div class=&quot;form-group label-floating&quot; [ngClass]=&quot;{{'{'}}'is-fill': demoForm.get('loanApplicant').get('pan_no').value, 'is-invalid': !demoForm.get('loanApplicant').get('pan_no').valid}&quot;&gt;
+                  &lt;input autocomplete=&quot;off&quot; class=&quot;form-control text-uppercase&quot; formControlName=&quot;pan_no&quot; type=&quot;text&quot; maxlength=&quot;10&quot; minlength=&quot;10&quot;&gt;
+                  &lt;label class=&quot;control-label&quot;&gt;Pan No &lt;/label&gt;
+                  &lt;div *ngIf=&quot;demoForm.get('loanApplicant').get('pan_no').invalid &amp;&amp; (demoForm.get('loanApplicant').get('pan_no').dirty &amp;&amp; demoForm.get('loanApplicant').get('pan_no').touched)&quot; class=&quot;error&quot;&gt;
+                    &lt;div *ngIf=&quot;demoForm.get('loanApplicant').get('pan_no').hasError('required') &amp;&amp; demoForm.get('loanApplicant').get('pan_no').dirty&quot; class=&quot;error-message danger-text&quot;&gt;Enter Pan No
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-xl-3 col-lg-4 col-md-6 col-sm-12&quot; formGroupName=&quot;loanApplicant&quot;&gt;
+                &lt;div class=&quot;form-group label-floating&quot; [ngClass]=&quot;{{'{'}}'is-fill': demoForm.get('loanApplicant').get('dob').value, 'is-invalid': !demoForm.get('loanApplicant').get('dob').valid}&quot;&gt;
+                  &lt;input autocomplete=&quot;off&quot; class=&quot;form-control datepicker&quot; formControlName=&quot;dob&quot; type=&quot;text&quot; maxlength=&quot;10&quot; minlength=&quot;8&quot;&gt;
+                  &lt;label class=&quot;control-label&quot;&gt;Date of Birth (As per PAN)&lt;/label&gt;
+                  &lt;span class=&quot;datepickerspan&quot; data-datepicker=&quot;datepicker&quot;&gt;&lt;/span&gt;
+                  &lt;div *ngIf=&quot;demoForm.get('loanApplicant').get('dob').invalid &amp;&amp; (demoForm.get('loanApplicant').get('dob').dirty &amp;&amp; demoForm.get('loanApplicant').get('dob').touched)&quot; class=&quot;error&quot;&gt;
+                    &lt;div *ngIf=&quot;demoForm.get('loanApplicant').get('dob').hasError('required') &amp;&amp; demoForm.get('loanApplicant').get('dob').dirty&quot; class=&quot;error-message danger-text&quot;&gt; Select Date of Birth &lt;/div&gt;
+                    &lt;div *ngIf=&quot;demoForm.get('loanApplicant').get('dob').hasError('pattern')&quot; class=&quot;error-message danger-text&quot;&gt; Enter valid Date &lt;/div&gt;
+                    &lt;div *ngIf=&quot;demoForm.get('loanApplicant').get('dob').hasError('minlength')&quot; class=&quot;error-message danger-text&quot;&gt; Enter valid Date MIN
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-xl-3 col-lg-4 col-md-6 col-sm-12&quot; formGroupName=&quot;loanApplicant&quot;&gt;
+                &lt;div class=&quot;form-group label-floating form-group-radio&quot;&gt;
+                  &lt;label class=&quot;control-label&quot;&gt;Gender&lt;/label&gt;
+                  &lt;div class=&quot;radio form-check&quot;&gt;
+                    &lt;label class=&quot;form-check-label&quot;&gt;
+                      &lt;input class=&quot;form-check-input&quot; formControlName=&quot;gender&quot; type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;male&quot;&gt; Male
+                      &lt;span class=&quot;circle&quot;&gt;
+                        &lt;span class=&quot;check&quot;&gt;&lt;/span&gt;
+                      &lt;/span&gt;
+                    &lt;/label&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;radio form-check&quot;&gt;
+                    &lt;label class=&quot;form-check-label&quot;&gt;
+                      &lt;input class=&quot;form-check-input&quot; formControlName=&quot;gender&quot; type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;femail&quot;&gt; Female
+                      &lt;span class=&quot;circle&quot;&gt;
+                        &lt;span class=&quot;check&quot;&gt;&lt;/span&gt;
+                      &lt;/span&gt;
+                    &lt;/label&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-xl-3 col-lg-4 col-md-6 col-sm-12&quot; formGroupName=&quot;loanApplicant&quot;&gt;
+                &lt;div class=&quot;form-group label-floating&quot; [ngClass]=&quot;{{'{'}}'is-fill': demoForm.get('loanApplicant').get('monthly_turnover').value, 'is-invalid': !demoForm.get('loanApplicant').get('monthly_turnover').valid}&quot;&gt;
+                  &lt;input autocomplete=&quot;off&quot; class=&quot;form-control&quot; formControlName=&quot;monthly_turnover&quot; type=&quot;text&quot;&gt;
+                  &lt;label class=&quot;control-label&quot;&gt;Monthly turnover&lt;/label&gt;
+                  &lt;div *ngIf=&quot;demoForm.get('loanApplicant').get('monthly_turnover').invalid &amp;&amp; (demoForm.get('loanApplicant').get('monthly_turnover').dirty &amp;&amp; demoForm.get('loanApplicant').get('monthly_turnover').touched)&quot; class=&quot;error&quot;&gt;
+                    &lt;div *ngIf=&quot;demoForm.get('loanApplicant').get('monthly_turnover').hasError('required') &amp;&amp; demoForm.get('loanApplicant').get('monthly_turnover').dirty&quot; class=&quot;error-message danger-text&quot;&gt;Enter Total Monthly Sales
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-xl-3 col-lg-4 col-md-6 col-sm-12&quot;&gt;
+                &lt;div class=&quot;form-group label-floating&quot; [ngClass]=&quot;{{'{'}}'is-fill': demoForm.controls['amount'].value, 'is-invalid': !demoForm.controls['amount'].valid}&quot;&gt;
+                  &lt;input autocomplete=&quot;off&quot; class=&quot;form-control&quot; formControlName=&quot;amount&quot; type=&quot;text&quot;&gt;
+                  &lt;label class=&quot;control-label&quot;&gt;Loan Amount&lt;/label&gt;
+                  &lt;div *ngIf=&quot;demoForm.controls['amount'].invalid &amp;&amp; (demoForm.controls['amount'].dirty &amp;&amp; demoForm.controls['amount'].touched)&quot; class=&quot;error&quot;&gt;
+                    &lt;div *ngIf=&quot;demoForm.controls['amount'].errors.required &amp;&amp; demoForm.controls['amount'].dirty&quot; class=&quot;error-message danger-text&quot;&gt; Enter Loan Amount
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;row&quot;&gt;
+              &lt;div class=&quot;col text-right&quot;&gt;
+                &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary btn-round mat-button&quot;&gt;Update&lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      </pre>
+        </div>
+      </div>
+      <!-- Responsive Table -->
+      <div class="card-container">
+        <div class="card card-small">
+          <span>Responsive Table</span>
+        </div>
+        <div class="result">
+          <div class="row">
+            <div class="col">
+              <div class="cust-table cust-table-horizontal">
+                <div class="cust-table-body">
+                  <ul>
+                    <li>
+                      <div class="cust-th">
+                        <span>Total Number of Accounts</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cust-th">
+                        <span>Vintage with Bureau </span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cust-th">
+                        <span>Total Number of Active Accounts</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cust-th">
+                        <span>Latest Tradeline Opened Date</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cust-th">
+                        <span>Total Number of BL Accounts</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cust-th">
+                        <span>Total Number of Accounts - guarantor</span>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <div class="cust-td"><span>3</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>--</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>3</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>--</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>3</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>--</span></div>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <div class="cust-td"><span>3</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>--</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>3</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>--</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>3</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>--</span></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="cust-table cust-table-vertical">
+                <div class="cust-table-body">
+                  <ul>
+                    <li>
+                      <div class="cust-th">
+                        <span>Median BTO</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cust-th">
+                        <span>Industry Margins</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cust-th">
+                        <span>Income</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cust-th">
+                        <span>FOIR</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cust-th">
+                        <span>Disposable Income</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cust-th">
+                        <span>Existing EMI</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cust-th">
+                        <span>Net Disposable Income</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cust-th">
+                        <span>Rate of Interest</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cust-th">
+                        <span>Tenure</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cust-th">
+                        <span>Loan Eligibility</span>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <div class="cust-td"><span>total_monthly_bto</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>net_margin_rate</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>net_margin</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>foir</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>disposable_income</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>bankingEmi</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>net_disposable_income</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>roi%</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>tenure months</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>banking_eligibility</span></div>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <div class="cust-td"><span>total_monthly_bto</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>net_margin_rate</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>net_margin</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>foir</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>disposable_income</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>bankingEmi</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>net_disposable_income</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>roi%</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>tenure months</span></div>
+                    </li>
+                    <li>
+                      <div class="cust-td"><span>banking_eligibility</span></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Terminal -->
+        <div class="terminal">
+          <pre>
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col&quot;&gt;
+          &lt;div class=&quot;cust-table cust-table-horizontal&quot;&gt;
+            &lt;div class=&quot;cust-table-body&quot;&gt;
+              &lt;ul&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-th&quot;&gt;
+                    &lt;span&gt;Total Number of Accounts&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-th&quot;&gt;
+                    &lt;span&gt;Vintage with Bureau &lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-th&quot;&gt;
+                    &lt;span&gt;Total Number of Active Accounts&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-th&quot;&gt;
+                    &lt;span&gt;Latest Tradeline Opened Date&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-th&quot;&gt;
+                    &lt;span&gt;Total Number of BL Accounts&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-th&quot;&gt;
+                    &lt;span&gt;Total Number of Accounts - guarantor&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+              &lt;/ul&gt;
+              &lt;ul *ngFor=&quot;let item of List; let i = index&quot;&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-td&quot;&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-td&quot;&gt;&lt;span&gt;--&lt;/span&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-td&quot;&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-td&quot;&gt;&lt;span&gt;--&lt;/span&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-td&quot;&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-td&quot;&gt;&lt;span&gt;--&lt;/span&gt;&lt;/div&gt;
+                &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col&quot;&gt;
+          &lt;div class=&quot;cust-table cust-table-vertical&quot;&gt;
+            &lt;div class=&quot;cust-table-body&quot;&gt;
+              &lt;ul&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-th&quot;&gt;
+                    &lt;span&gt;Median BTO&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-th&quot;&gt;
+                    &lt;span&gt;Industry Margins&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-th&quot;&gt;
+                    &lt;span&gt;Income&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-th&quot;&gt;
+                    &lt;span&gt;FOIR&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-th&quot;&gt;
+                    &lt;span&gt;Disposable Income&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-th&quot;&gt;
+                    &lt;span&gt;Existing EMI&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-th&quot;&gt;
+                    &lt;span&gt;Net Disposable Income&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-th&quot;&gt;
+                    &lt;span&gt;Rate of Interest&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-th&quot;&gt;
+                    &lt;span&gt;Tenure&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-th&quot;&gt;
+                    &lt;span&gt;Loan Eligibility&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+              &lt;/ul&gt;
+              &lt;ul *ngFor=&quot;let item of List; let i = index&quot;&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-td&quot;&gt;&lt;span&gt;total_monthly_bto&lt;/span&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-td&quot;&gt;&lt;span&gt;net_margin_rate&lt;/span&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-td&quot;&gt;&lt;span&gt;net_margin&lt;/span&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-td&quot;&gt;&lt;span&gt;foir&lt;/span&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-td&quot;&gt;&lt;span&gt;disposable_income&lt;/span&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-td&quot;&gt;&lt;span&gt;bankingEmi&lt;/span&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-td&quot;&gt;&lt;span&gt;net_disposable_income&lt;/span&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-td&quot;&gt;&lt;span&gt;roi%&lt;/span&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-td&quot;&gt;&lt;span&gt;tenure months&lt;/span&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;cust-td&quot;&gt;&lt;span&gt;banking_eligibility&lt;/span&gt;&lt;/div&gt;
+                &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+ </pre>
+        </div>
+      </div>
+      <!-- API CallBack -->
+      <div class="card-container">
+        <div class="card card-small">
+          <span>API CallBack</span>
+        </div>
+        <!-- Terminal -->
+        <div class="terminal">
+          <pre>
+        // component
+        this.serviceName.methodName(argument?).subscribe((response: ModelBinding) =&gt; {{'{'}}
+          if (response) {{'{'}}
+            this.variableName = response as ModelType (String | Boolean | Object | Array&lt;type&gt; | Blob | any);
+          } else {{'{'}}
+            this.toastr.errorMsg('Error');
+          }
+        }, (error: any) =&gt; {{'{'}}
+          this.toastr.errorMsg(error | error.,essage);
+          // code Here
+        });
+
+        // service
+        methodName() {{'{'}}
+          return this.makeGetCall(environment.APIURL + '/path');
+        }
+
+        // BaseProvider
+        /*
+        Function for GET call
+        Parameters:
+        resourceURL: The resource on which POST call has to be made.
+        Return Type: : Observable&lt; {{'{'}}} | HttpResponse&lt;Object&gt;&gt;
+        */
+        makeGetCall(resourceURL: string, params?: URLSearchParams): Observable&lt; {{'{'}}} | HttpResponse&lt;any&gt;&gt;  {{'{'}}
+            return this.http.get(resourceURL,  {{'{'}} headers: this.getHttpHeaders(), observe: 'body' }).pipe(retry(0), map(response =&gt; response), catchError(this.handleError));
+        }
+      </pre>
+        </div>
+      </div>
+      <!-- Eventifier -->
+      <div class="card-container">
+        <div class="card card-small">
+          <span>Local Eventifier</span>
+        </div>
+        <!-- Terminal -->
+        <div class="terminal">
+          <pre>
+        import {{ '{' }} GlobalEventifier } from './../../../../_eventifier';
+        // component
+        YourComponent implements OnInit {{ '{' }}
+            public loanCode: string;
+            constructor(public serviceName: ServiceName, public globalEventifier: GlobalEventifier) {{'{'}}
+
+          }
+
+          ngOnInit() {{'{'}}
+            this.globalEventifier.$loanCode.subscribe((response: string) => {{'{'}}
+              this.loanCode = response as string;
+              if (this.loanCode) {{'{'}}
+                this.methodName();
+              }
+            });
+          }
+
+          methodName() {{'{'}}
+            this.serviceName.methodName(argument?).subscribe((response: ModelBinding) =&gt; {{'{'}}
+              if (response) {{'{'}}
+                this.variableName = response as ModelType (String | Boolean | Object | Array&lt;type&gt; | Blob | any);
+              } else {{'{'}}
+                this.toastr.errorMsg('Error');
+              }
+            }, (error: any) =&gt; {{'{'}}
+              this.toastr.errorMsg(error | error.,essage);
+              // code Here
+            });
+          }
+      }
+      </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,805 @@
+router-outlet,
+app-login,
+app-root,
+app-rightsidebar,
+app-navbar,
+app-remarks,
+app-application,
+app-notification,
+app-form-details,
+app-tracking-details,
+app-scf-eligibility,
+app-dependent-details,
+app-basic-details,
+app-business-tab,
+app-taxation-details,
+app-partner-details,
+app-existing-loan-details,
+app-reference-details,
+app-finance-details,
+app-document-checklist,
+app-unverified-document,
+app-pending-document,
+app-deleted-document,
+app-cleared-document,
+app-discrepent-document,
+app-document-view-model {
+  display: block;
+}
+
+app-unverified-document,
+app-pending-document,
+app-deleted-document,
+app-cleared-document,
+app-discrepent-document {
+  height: 100%;
+}
+
+app-adminlayout {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+app-login,
+app-leadpool {
+  display: block;
+  width: 100%;
+}
+
+app-codestack {
+  display: block;
+  width: 100%;
+  padding: 0px 15px;
+}
+
+.animated-background,
+.window-remarks-placeholder,
+.form-contol-masker {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: #f6f7f8;
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  background-size: 800px 104px;
+  height: 100%;
+  position: relative;
+}
+
+/* Every thing below this is just positioning */
+.background-masker {
+  background: #fff;
+  position: absolute;
+
+  &.header-top,
+  &.header-bottom,
+  &.subheader-bottom {
+    top: 0;
+    left: 40px;
+    right: 0;
+    height: 10px;
+  }
+
+  &.header-left,
+  &.subheader-left,
+  &.header-right,
+  &.subheader-right {
+    top: 10px;
+    left: 40px;
+    height: 8px;
+    width: 10px;
+  }
+
+  &.header-bottom {
+    top: 18px;
+    height: 6px;
+  }
+
+  &.subheader-left,
+  &.subheader-right {
+    top: 24px;
+    height: 6px;
+  }
+
+  &.header-right {
+    width: auto;
+    left: auto;
+    right: 0;
+  }
+
+  &.subheader-right {
+    width: auto;
+    left: auto;
+    right: 0;
+  }
+
+  &.subheader-bottom {
+    top: 30px;
+    height: 10px;
+  }
+
+  &.content-top,
+  &.content-second-line,
+  &.content-third-line,
+  &.content-second-end,
+  &.content-third-end,
+  &.content-first-end {
+    top: 40px;
+    left: 0;
+    right: 0;
+    height: 6px;
+  }
+
+  &.content-top {
+    height: 20px;
+  }
+
+  &.content-first-end,
+  &.content-second-end,
+  &.content-third-end {
+    width: auto;
+    left: auto;
+    right: 0;
+    top: 60px;
+    height: 8px;
+  }
+
+  &.content-second-line {
+    top: 68px;
+  }
+
+  &.content-second-end {
+    left: 420px;
+    top: 74px;
+  }
+
+  &.content-third-line {
+    top: 82px;
+  }
+
+  &.content-third-end {
+    left: auto;
+    top: 88px;
+  }
+}
+
+.window-remarks-placeholder {
+  height: 54px;
+
+  .placeholder-masker {
+    background: #fff;
+    position: absolute;
+
+    &[class*="-box-"] {
+      top: 16px;
+      left: 40px;
+      height: 8px;
+      width: 10px;
+    }
+
+    &[class*="-line"] {
+      height: 8px;
+      width: calc(100% - 40px);
+    }
+
+    &.top-line {
+      width: 100%;
+      left: 0;
+    }
+
+    &.top-box-right {
+      right: 0;
+      left: auto;
+    }
+
+    &.middel-line-top {
+      left: 40px;
+      top: 8px;
+    }
+
+    &.middel-line {
+      top: 23px;
+      left: 40px;
+    }
+
+    &.middel-line-bottom {
+      left: 40px;
+      top: 39px;
+    }
+
+    &.middel-box-left {
+      top: 31px;
+    }
+
+    &.middel-box-right {
+      top: 31px;
+      right: 0;
+      left: auto;
+    }
+
+    &.bottom-line-end {
+      top: 47px;
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+.fadeMaster-master {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  top: 0px;
+  background: #fff;
+  height: 100%;
+  overflow: hidden;
+  left: 0px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-contol-masker {
+  height: 54px;
+  overflow: hidden;
+
+  .placeholder-masker {
+    background: #fff;
+    position: absolute;
+
+    &:first-child {
+      width: 100%;
+      height: 8px;
+    }
+
+    &:nth-child(2) {
+      width: 10px;
+      height: 8px;
+      top: 8px;
+    }
+
+    &:nth-child(3) {
+      width: 170px;
+      height: 8px;
+      top: 8px;
+      right: 0;
+    }
+
+    &:nth-child(4) {
+      width: 100%;
+      height: 8px;
+      top: 16px;
+    }
+
+    &:nth-child(5) {
+      width: 10px;
+      height: 8px;
+      top: 24px;
+    }
+
+    &:nth-child(6) {
+      width: 10px;
+      height: 8px;
+      top: 24px;
+      right: 0;
+    }
+
+    &:nth-child(7) {
+      width: 100%;
+      height: 8px;
+      top: 32px;
+    }
+
+    &:nth-child(8) {
+      width: 10px;
+      height: 8px;
+      top: 40px;
+    }
+
+    &:nth-child(9) {
+      width: 10px;
+      height: 8px;
+      top: 40px;
+      right: 0;
+    }
+
+    &:nth-child(10) {
+      width: 100%;
+      height: 12px;
+      top: 42px;
+      right: 0;
+    }
+  }
+}
+
+table.biz-kyc-tbl {
+  width: 100%;
+  display: inline-block;
+
+  thead {
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  th {
+    display: inline-block;
+    width: 25%;
+    background-color: #eeeded;
+    color: #575151;
+  }
+
+  tr {
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid #d5dce4;
+
+    td {
+      width: 25%;
+      display: inline-block;
+    }
+  }
+}
+
+.parameter-name {
+  font-family: lato, medium;
+  font-weight: 700;
+}
+
+.tbl-head {
+  background-color: #eeeded;
+  color: #575151;
+}
+
+.center-align-items-util {
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.kyc-btm-indicator.flt-right {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.personal-kyc-tab-wrapper {
+  .select-kyc-btn-wrapper {
+    width: 85%;
+    display: inline-block;
+    margin-bottom: 0px;
+  }
+
+  .applicant-type-selection-button {
+    font-family: lato;
+    margin-right: 25px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    text-transform: capitalize;
+    margin-top: 10px;
+  }
+
+  .applicant-type-selection-button.applicant-type-selection-button-selected {
+    background-color: #3ca871;
+    color: #fff;
+  }
+}
+
+.util-margin15 {
+  margin: 15px;
+}
+
+.util-margin30 {
+  margin: 30px;
+}
+.util-margin-left20 {
+  margin-left: 20px;
+}
+.util-margin-left25 {
+  margin-left: 25px;
+}
+.util-margin-left10 {
+  margin-left: 10px;
+}
+.util-margin-left5 {
+  margin-left: 5px;
+}
+.util-margin-top10 {
+  margin-top: 10px;
+}
+.util-margin-bottom10 {
+  margin-bottom: 10px;
+}
+.util-padding-left0 {
+  padding-left: 0;
+}
+.util-padding-left25 {
+  padding-left: 25px;
+}
+.util-padding10 {
+  padding: 10px;
+}
+.util-padding15 {
+  padding: 15px;
+}
+.util-float-right {
+  float: right;
+}
+.number-text-eligibility-card {
+  text-transform: capitalize;
+  font-size: 12px;
+}
+.no-applicant-data {
+  margin: 5em;
+  text-align: center;
+  font-family: Lato, bold;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+.bsa-select-bank-header {
+  height: 100%;
+  background: #efefef;
+  border-radius: 7px 7px 0 0;
+  padding: 25px;
+  vertical-align: middle;
+  font-size: 20px;
+}
+.bsa-page {
+  .bsa-eligibility-card {
+    display: inline-flex;
+    .elig-card-wrap {
+      max-width: 49%;
+      margin-bottom: 25px;
+    }
+    .banking-elig {
+      background-color: #26c6da;
+      border-radius: 5px;
+    }
+    .abb-elig {
+      background-color: #ffa726;
+      border-radius: 5px;
+    }
+    .elig-card-img {
+      margin: 10px 5px 5px;
+      height: 80px;
+      width: 80px;
+      float: right;
+      opacity: 0.6;
+    }
+  }
+  .customEligibilityCard {
+    padding: 15px;
+    color: #fff;
+    font-size: 20px;
+    height: auto;
+    border-radius: 3px;
+    .eligibility-lbl {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+  }
+  .bank-statement-list {
+    height: 100%;
+    border-style: solid;
+    border-width: 0 1px 1px;
+    border-color: rgba(0, 0, 0, 0.16);
+    background-color: white;
+    padding: 5px;
+    .bankStatement-details {
+      font-size: 15px;
+      padding-left: 3.5em;
+    }
+    .sync-btn-statement {
+      color: #0073bb;
+    }
+    .dot-info {
+      height: 8px;
+      width: 8px;
+      background-color: #ffa726;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .dot-success {
+      height: 8px;
+      margin-left: 8px;
+      width: 8px;
+      background-color: #26c6da;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  }
+  .selected-bank-statement {
+    background-color: #2b5582;
+    color: #fff;
+    font-weight: bold;
+  }
+  .red-btn-hover:hover {
+    color: #fff;
+    background-color: #f41c20;
+  }
+  .danger {
+    color: #f41c20;
+    border-width: 1px;
+    border-color: #f41c20;
+    // min-width: 100px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    border-radius: 25px;
+  }
+  .success {
+    color: #00c1b2;
+    border-width: 1px;
+    border-color: #00c1b2;
+    // min-width: 100px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    border-radius: 25px;
+  }
+  .success-btn-hover:hover {
+    color: #fff;
+    background-color: #00c1b2;
+  }
+}
+.float-left-util {
+  float: left;
+}
+.abb-text-width {
+  width: 77%;
+}
+.col-md-1.consider-analysis {
+  input {
+    cursor: pointer;
+  }
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  min-width: 1em;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-loop3:before {
+  content: "\EDA7";
+}
+.btn-border-transperant {
+  border: 1px solid transparent;
+}
+.util-bold {
+  font-weight: bold;
+}
+.month-view-colwidth {
+  width: 14.3%;
+  border: 1px solid #ddd;
+}
+.monthly-view-tbl {
+  .tbl-head.bck-color {
+    background-color: #fff;
+  }
+  .month-col-center {
+    text-align: center;
+    padding-top: 20px;
+  }
+  .month-tbl-row-center {
+    text-align: center;
+    padding-top: 7px;
+  }
+}
+.monthly-view-sub-head {
+  margin-top: 20px;
+  font-size: 22px;
+  font-family: lato, semibold;
+  text-transform: uppercase;
+  color: #32577e;
+}
+.cust-table.cust-table-horizontal.month-v-tbl {
+  margin-top: 0px;
+}
+.no-data-available-msg {
+  font-size: 24px;
+  color: #f41c20;
+  float: left;
+  text-align: center;
+  width: 100%;
+  margin-top: 25px;
+}
+.span-flex {
+  display: flex;
+  width: 100%;
+}
+.bsa-tbl-head {
+  background: #efefef;
+  border-radius: 7px 7px 0 0;
+  padding: 25px;
+  vertical-align: middle;
+  font-size: 20px;
+  margin-top: 30px;
+  text-transform: uppercase;
+  border-color: #00c1b2 #ddd #ddd;
+  border-width: 2px 1px 1px;
+  border-style: solid;
+}
+.cust-table.cust-table-horizontal.cust-bsa-tbl {
+  margin: 0 auto;
+}
+.abb-tbl-head-wrapper {
+  .abb-header-title {
+    display: inline-block;
+    width: 15%;
+  }
+  .abb-calc-limit-wrapper {
+    .abb-limit-label {
+      margin-left: 25px;
+      display: inline-block;
+      font-size: 15px;
+      text-transform: capitalize;
+    }
+    .abb-limit-val-input {
+      display: inline-block;
+      width: 15%;
+      margin-left: 10px;
+    }
+  }
+}
+.cust-table.cust-table-horizontal .cust-table-body.abb-calc-tbl ul.abb-calc-wrap {
+  li {
+    display: inline-block;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    input {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding-left: 10px;
+    }
+    .abb-calc-diff {
+      color: green;
+      padding-left: 10px;
+    }
+    span.month-col-abb-calc {
+      font-size: 16px;
+      padding: 12px;
+      display: inline-block;
+    }
+  }
+  li.medians-abb-calc {
+    padding: 15px;
+    font-size: 15px;
+  }
+}
+.cust-table.cust-table-horizontal .cust-table-body.abb-calc-tbl ul {
+  li {
+    /* padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px; */
+
+    input {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+  }
+}
+span.month-col-abb-calc-elig {
+  font-size: 16px;
+  padding: 10px;
+  display: inline-block;
+}
+.cust-table.cust-table-horizontal .cust-table-body.abb-calc-tbl ul.final-elig-wrap {
+  li {
+    padding: 15px;
+  }
+  .final-abb-eligibility {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+.input-height {
+  height: 20px;
+  font-size: 15px;
+  width: 40%;
+  padding-left: 5px;
+}
+
+.input-abb-custom {
+  height: 20px;
+  font-size: 15px;
+  width: 10%;
+  padding-left: 5px;
+  display: inline;
+}
+
+.rows-selectbox {
+  display: inline;
+  width: 10%;
+}
+
+.rawtx-searchbox {
+  display: inline;
+  width: 20%;
+  float: right;
+}
+
+.leadPool-pageInfo {
+  display: inline-block;
+  width: 60%;
+}
+
+.leadPool-headLbl{
+  font-weight: bold;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+// .leadpoolTbl-headWrap{
+//   padding:10px 0 10px 0;
+//   margin-top: 10px;
+// }
+
+.text-center{
+  text-align: center;
+}
+
+.util-font12{
+  font-size:12px;
+}
+
+.editLeadInfoModal .modal-dialog .modal-body{
+  padding:30px;
+}
+
+.modalEdit-tab-head{
+  padding: 10px 0px;
+  background: #32577e;
+  color: #ffffff;
+  font-size: 120%;
+  background: -webkit-gradient(linear, left top, right top, from(#1e3b58), to(#32577e));
+  background: linear-gradient(90deg, #1e3b58, #32577e);
+}
+
+.remarks-comp-inject{
+  .main-panel{
+    width: 100%;
+    .remarks{
+      position: relative;
+      height: auto;
+      width: 100%;
+      top: auto;
+      left: auto;
+      transform: none;
+      box-shadow: none;
+      margin-left:40px;
+      app-remarks{
+        .remarks-card{
+          width: 100%;
+        }
+      }
+      .remarks-height{
+        height: auto;
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

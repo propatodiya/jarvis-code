@@ -1,0 +1,111 @@
+generic-table,
+.generic-table {
+  display: block;
+  .table {
+    margin: 0 auto;
+    > thead > tr {
+      background: rgb(59, 73, 88);
+      color: rgb(255, 255, 255);
+    }
+    > thead > tr > th {
+      cursor: default;
+      span {
+        cursor: pointer;
+        position: relative;
+        &::after {
+          border: solid rgb(255, 255, 255);
+          border-width: 0 2px 2px 0;
+          padding: 2px;
+          border-radius: 1px;
+          display: inline-block;
+          position: absolute;
+          left: calc(100% + 6px);
+        }
+      }
+      &.sort-desc {
+        span {
+          &::after {
+            content: "";
+            top: calc(50% - 4px);
+            transform: rotate(45deg);
+          }
+        }
+      }
+      &.sort-asc {
+        span {
+          &::after {
+            content: "";
+            top: calc(50% - 2px);
+            transform: rotate(225deg);
+          }
+        }
+      }
+      &.sort-enable {
+        span {
+          &::after {
+            content: none;
+          }
+        }
+      }
+      &.action-column {
+        text-align: right;
+      }
+    }
+    tbody tr:nth-child(even) {
+      background-color: rgb(245, 245, 245);
+    }
+    tbody tr td {
+      &.action-column {
+        text-align: right;
+      }
+    }
+  }
+}
+.generic-table-footer {
+  display: block;
+  padding: 15px;
+  border-top: 1px solid rgb(222, 226, 230);
+}
+
+gt-pagination {
+  display: block;
+  nav {
+    ul {
+      padding: 0px;
+      margin: 0 auto;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      li {
+        display: inline-flex;
+        width: 26px;
+        height: 26px;
+        justify-content: center;
+        align-items: center;
+        color: $black;
+        cursor: pointer;
+        overflow: hidden;
+        &.active {
+          background: $brand-primary;
+          color: $white;
+          border-radius: 50%;
+          a,
+          &a:focus,
+          &a:hover {
+            color: inherit;
+          }
+        }
+        a {
+          color: inherit;
+          display: block;
+          width: 100%;
+          justify-content: center;
+          display: flex;
+          height: 100%;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

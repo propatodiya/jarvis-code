@@ -1,0 +1,15 @@
+.custom-tooltip {
+  position: relative;
+  &:hover + .tooltip-block {
+    display: inline-block;
+    background: $brand-primary;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 100;
+  }
+}
+.tooltip-block {
+  display: none;
+}

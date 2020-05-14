@@ -1,0 +1,24 @@
+.loan-status-parent{
+
+    .loan-status{
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        padding: 15px;
+        margin: 20px 10px;
+
+        .title{
+            text-align: center;
+            font-size: 18px;
+            color: $brand-primary;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            min-height: 10px;
+        }
+
+        .updated-at{
+            color: $brand-success;
+            text-align: center;
+        }
+    }
+
+    
+}
